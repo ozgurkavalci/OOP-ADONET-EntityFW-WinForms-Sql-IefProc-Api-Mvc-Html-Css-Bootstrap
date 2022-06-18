@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="BookStore" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+  <EntityContainer Name="BookStoreContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Musteri" EntityType="BookStore.Musteri" />
+    <EntitySet Name="Urun" EntityType="BookStore.Urun" />
+    <EntitySet Name="Sube" EntityType="BookStore.Sube" />
+    <EntitySet Name="Personel" EntityType="BookStore.Personel" />
+    <EntitySet Name="Kullanici" EntityType="BookStore.Kullanici" />
+    <AssociationSet Name="UrunSube" Association="BookStore.UrunSube">
+      <End Role="Urun" EntitySet="Urun" />
+      <End Role="Sube" EntitySet="Sube" />
+    </AssociationSet>
+    <AssociationSet Name="SubePersonel" Association="BookStore.SubePersonel">
+      <End Role="Sube" EntitySet="Sube" />
+      <End Role="Personel" EntitySet="Personel" />
+    </AssociationSet>
+    <AssociationSet Name="MusteriUrun" Association="BookStore.MusteriUrun">
+      <End Role="Musteri" EntitySet="Musteri" />
+      <End Role="Urun" EntitySet="Urun" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Musteri">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+    </Key>
+    <Property Name="MusteriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriAdSoyad" Type="String" Nullable="false" />
+    <Property Name="MusteriTcNO" Type="String" Nullable="false" MaxLength="11" FixedLength="true" ConcurrencyMode="None" />
+    <Property Name="MusteriMail" Type="String" Nullable="false" />
+    <Property Name="MusteriTelefon" Type="String" Nullable="false" FixedLength="true" MaxLength="10" />
+    <Property Name="MusteriAdres" Type="String" Nullable="false" />
+    <NavigationProperty Name="Urun" Relationship="BookStore.MusteriUrun" FromRole="Musteri" ToRole="Urun" />
+  </EntityType>
+  <EntityType Name="Urun">
+    <Key>
+      <PropertyRef Name="UrunID" />
+    </Key>
+    <Property Name="UrunID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UrunTuru" Type="String" Nullable="false" />
+    <Property Name="UrunKategori" Type="String" Nullable="false" />
+    <Property Name="UrunAdi" Type="String" Nullable="false" />
+    <Property Name="UrunCikisYili" Type="Int32" Nullable="false" />
+    <Property Name="UrunYazarAdi" Type="String" Nullable="false" />
+    <Property Name="UrunAdet" Type="Int32" Nullable="false" />
+    <Property Name="UrunFiyat" Type="Decimal" Nullable="false" />
+    <NavigationProperty Name="Sube" Relationship="BookStore.UrunSube" FromRole="Urun" ToRole="Sube" />
+    <NavigationProperty Name="Musteri" Relationship="BookStore.MusteriUrun" FromRole="Urun" ToRole="Musteri" />
+    <Property Name="MusteriMusteriID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sube">
+    <Key>
+      <PropertyRef Name="SubeID" />
+    </Key>
+    <Property Name="SubeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubeAdi" Type="String" Nullable="false" />
+    <Property Name="SubeCiro" Type="Decimal" Nullable="false" />
+    <Property Name="SubePersonelSayisi" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Urun" Relationship="BookStore.UrunSube" FromRole="Sube" ToRole="Urun" />
+    <Property Name="UrunUrunID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Personel" Relationship="BookStore.SubePersonel" FromRole="Sube" ToRole="Personel" />
+  </EntityType>
+  <EntityType Name="Personel">
+    <Key>
+      <PropertyRef Name="PersonelID" />
+    </Key>
+    <Property Name="PersonelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonelAdSoyad" Type="String" Nullable="false" />
+    <Property Name="PersonelTcNo" Type="String" Nullable="false" FixedLength="true" MaxLength="11" />
+    <Property Name="PersonelYas" Type="Int32" Nullable="false" />
+    <Property Name="PersonelMail" Type="String" Nullable="false" />
+    <Property Name="PersonelTelefon" Type="String" Nullable="false" FixedLength="true" MaxLength="10" />
+    <Property Name="PersonelAdres" Type="String" Nullable="false" />
+    <NavigationProperty Name="Sube" Relationship="BookStore.SubePersonel" FromRole="Personel" ToRole="Sube" />
+    <Property Name="SubeSubeID" Type="Int32" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="KullaniciID" />
+    </Key>
+    <Property Name="KullaniciID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciAdi" Type="String" Nullable="false" />
+    <Property Name="KullaniciSifre" Type="String" Nullable="false" />
+    <Property Name="KullaniciMail" Type="String" Nullable="false" />
+    <Property Name="KulllaniciTelefon" Type="String" Nullable="false" />
+  </EntityType>
+  <Association Name="UrunSube">
+    <End Type="BookStore.Urun" Role="Urun" Multiplicity="1" />
+    <End Type="BookStore.Sube" Role="Sube" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urun">
+        <PropertyRef Name="UrunID" />
+      </Principal>
+      <Dependent Role="Sube">
+        <PropertyRef Name="UrunUrunID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SubePersonel">
+    <End Type="BookStore.Sube" Role="Sube" Multiplicity="1" />
+    <End Type="BookStore.Personel" Role="Personel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sube">
+        <PropertyRef Name="SubeID" />
+      </Principal>
+      <Dependent Role="Personel">
+        <PropertyRef Name="SubeSubeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MusteriUrun">
+    <End Type="BookStore.Musteri" Role="Musteri" Multiplicity="1" />
+    <End Type="BookStore.Urun" Role="Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteri">
+        <PropertyRef Name="MusteriID" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="MusteriMusteriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

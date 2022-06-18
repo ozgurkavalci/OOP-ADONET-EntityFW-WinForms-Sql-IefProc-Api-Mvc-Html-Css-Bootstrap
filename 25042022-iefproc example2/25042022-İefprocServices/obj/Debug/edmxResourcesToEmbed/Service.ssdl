@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ServicesModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Hizmetler">
+    <Key>
+      <PropertyRef Name="HizmetNo" />
+    </Key>
+    <Property Name="HizmetNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HizmetAdi" Type="varchar" MaxLength="50" />
+    <Property Name="HizmetTanimi" Type="varchar" MaxLength="50" />
+    <Property Name="HizmetFiyat" Type="money" />
+  </EntityType>
+  <EntityType Name="HizmetOzellikler">
+    <Key>
+      <PropertyRef Name="HizmetOzellikNo" />
+    </Key>
+    <Property Name="HizmetOzellikNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HizmetOzellikHizmetNo" Type="int" />
+    <Property Name="HizmetAciklama" Type="nvarchar" MaxLength="50" />
+    <Property Name="HizmetOzellikEkstra" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Musteriler">
+    <Key>
+      <PropertyRef Name="MusteriNo" />
+    </Key>
+    <Property Name="MusteriNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriAdSoyad" Type="nvarchar" MaxLength="50" />
+    <Property Name="MusteriCinsiyet" Type="nchar" MaxLength="10" />
+    <Property Name="MusteriTelefon" Type="char" MaxLength="10" />
+    <Property Name="MusteriTcNo" Type="char" MaxLength="11" />
+    <Property Name="MusteriAdres" Type="nvarchar" MaxLength="50" />
+    <Property Name="MusteriHizmetNo" Type="int" />
+    <Property Name="MusteriMail" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Siparisler">
+    <Key>
+      <PropertyRef Name="SiparisNo" />
+    </Key>
+    <Property Name="SiparisNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SiparisAdi" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiparisMusteriNo" Type="int" />
+    <Property Name="SiparisAdres" Type="nvarchar" MaxLength="50" />
+    <Property Name="SiparisAciklama" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK_HizmetOzellikler_Hizmetler">
+    <End Role="Hizmetler" Type="Self.Hizmetler" Multiplicity="0..1" />
+    <End Role="HizmetOzellikler" Type="Self.HizmetOzellikler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hizmetler">
+        <PropertyRef Name="HizmetNo" />
+      </Principal>
+      <Dependent Role="HizmetOzellikler">
+        <PropertyRef Name="HizmetOzellikHizmetNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Musteriler_Hizmetler">
+    <End Role="Hizmetler" Type="Self.Hizmetler" Multiplicity="0..1" />
+    <End Role="Musteriler" Type="Self.Musteriler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hizmetler">
+        <PropertyRef Name="HizmetNo" />
+      </Principal>
+      <Dependent Role="Musteriler">
+        <PropertyRef Name="MusteriHizmetNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparisler_Musteriler">
+    <End Role="Musteriler" Type="Self.Musteriler" Multiplicity="0..1" />
+    <End Role="Siparisler" Type="Self.Siparisler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteriler">
+        <PropertyRef Name="MusteriNo" />
+      </Principal>
+      <Dependent Role="Siparisler">
+        <PropertyRef Name="SiparisMusteriNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="HArama" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HizmetNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="HEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HizmetAdi" Type="varchar" Mode="In" />
+    <Parameter Name="HizmetTanimi" Type="varchar" Mode="In" />
+    <Parameter Name="HizmetFiyat" Type="money" Mode="In" />
+  </Function>
+  <Function Name="HG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HizmetNo" Type="int" Mode="In" />
+    <Parameter Name="HizmetAdi" Type="varchar" Mode="In" />
+    <Parameter Name="HizmetTanimi" Type="varchar" Mode="In" />
+    <Parameter Name="HizmetFiyat" Type="money" Mode="In" />
+  </Function>
+  <Function Name="HGor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="HOEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HizmetOzellikHizmetNo" Type="int" Mode="In" />
+    <Parameter Name="HizmetAciklama" Type="nvarchar" Mode="In" />
+    <Parameter Name="HizmetOzellikEkstra" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HOG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HizmetOzellikNo" Type="int" Mode="In" />
+    <Parameter Name="HizmetOzellikHizmetNo" Type="int" Mode="In" />
+    <Parameter Name="HizmetAciklama" Type="nvarchar" Mode="In" />
+    <Parameter Name="HizmetOzellikEkstra" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="HOGor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="HOSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HizmetOzellikNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="HSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="HizmetNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="MEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MusteriAdSoyad" Type="nvarchar" Mode="In" />
+    <Parameter Name="MusteriCinsiyet" Type="nchar" Mode="In" />
+    <Parameter Name="MusteriTelefon" Type="char" Mode="In" />
+    <Parameter Name="MusteriTcNo" Type="char" Mode="In" />
+    <Parameter Name="MusteriAdres" Type="nvarchar" Mode="In" />
+    <Parameter Name="MusteriHizmetNo" Type="int" Mode="In" />
+    <Parameter Name="MusteriMail" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="MG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MusteriNo" Type="int" Mode="In" />
+    <Parameter Name="MusteriAdSoyad" Type="nvarchar" Mode="In" />
+    <Parameter Name="MusteriCinsiyet" Type="nchar" Mode="In" />
+    <Parameter Name="MusteriTelefon" Type="char" Mode="In" />
+    <Parameter Name="MusteriTcNo" Type="char" Mode="In" />
+    <Parameter Name="MusteriAdres" Type="nvarchar" Mode="In" />
+    <Parameter Name="MusteriHizmetNo" Type="int" Mode="In" />
+    <Parameter Name="MusteriMail" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="MGor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="MSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MusteriNo" Type="int" Mode="In" />
+  </Function>
+  <Function Name="SEkle" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SiparisAdi" Type="nvarchar" Mode="In" />
+    <Parameter Name="SiparisMusteriNo" Type="int" Mode="In" />
+    <Parameter Name="SiparisAdres" Type="nvarchar" Mode="In" />
+    <Parameter Name="SiparisAciklama" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SG" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SiparisNo" Type="int" Mode="In" />
+    <Parameter Name="SiparisAdi" Type="nvarchar" Mode="In" />
+    <Parameter Name="SiparisMusteriNo" Type="int" Mode="In" />
+    <Parameter Name="SiparisAdres" Type="nvarchar" Mode="In" />
+    <Parameter Name="SiparisAciklama" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="SGor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="SSil" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SiparisNo" Type="int" Mode="In" />
+  </Function>
+  <EntityContainer Name="ServicesModelStoreContainer">
+    <EntitySet Name="Hizmetler" EntityType="Self.Hizmetler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HizmetOzellikler" EntityType="Self.HizmetOzellikler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Musteriler" EntityType="Self.Musteriler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Siparisler" EntityType="Self.Siparisler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_HizmetOzellikler_Hizmetler" Association="Self.FK_HizmetOzellikler_Hizmetler">
+      <End Role="Hizmetler" EntitySet="Hizmetler" />
+      <End Role="HizmetOzellikler" EntitySet="HizmetOzellikler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Musteriler_Hizmetler" Association="Self.FK_Musteriler_Hizmetler">
+      <End Role="Hizmetler" EntitySet="Hizmetler" />
+      <End Role="Musteriler" EntitySet="Musteriler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparisler_Musteriler" Association="Self.FK_Siparisler_Musteriler">
+      <End Role="Musteriler" EntitySet="Musteriler" />
+      <End Role="Siparisler" EntitySet="Siparisler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

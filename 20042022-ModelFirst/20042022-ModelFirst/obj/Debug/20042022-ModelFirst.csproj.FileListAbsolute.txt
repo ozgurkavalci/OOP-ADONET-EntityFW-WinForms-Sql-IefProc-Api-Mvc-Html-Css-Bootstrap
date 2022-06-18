@@ -1,0 +1,16 @@
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\bin\Debug\20042022-ModelFirst.exe.config
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\bin\Debug\20042022-ModelFirst.exe
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\bin\Debug\20042022-ModelFirst.pdb
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\bin\Debug\EntityFramework.dll
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\bin\Debug\EntityFramework.xml
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\obj\Debug\20042022-ModelFirst.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\obj\Debug\20042022-ModelFirst.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\obj\Debug\_20042022_ModelFirst.Form1.resources
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\obj\Debug\_20042022_ModelFirst.Properties.Resources.resources
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\obj\Debug\20042022-ModelFirst.csproj.GenerateResource.cache
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\obj\Debug\20042022-ModelFirst.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\obj\Debug\20042022-ModelFirst.csproj.CopyComplete
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\obj\Debug\20042022-ModelFirst.exe
+C:\Users\STUDENT2\Desktop\20042022-ModelFirst\20042022-ModelFirst\obj\Debug\20042022-ModelFirst.pdb

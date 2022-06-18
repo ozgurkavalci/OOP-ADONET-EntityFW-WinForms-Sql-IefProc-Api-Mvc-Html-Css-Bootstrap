@@ -1,0 +1,6 @@
+C:\Users\ozgur\OneDrive\Masaüstü\My 4 layered\Entity\bin\Debug\Entity.dll
+C:\Users\ozgur\OneDrive\Masaüstü\My 4 layered\Entity\bin\Debug\Entity.pdb
+C:\Users\ozgur\OneDrive\Masaüstü\My 4 layered\Entity\obj\Debug\Entity.csproj.AssemblyReference.cache
+C:\Users\ozgur\OneDrive\Masaüstü\My 4 layered\Entity\obj\Debug\Entity.csproj.CoreCompileInputs.cache
+C:\Users\ozgur\OneDrive\Masaüstü\My 4 layered\Entity\obj\Debug\Entity.dll
+C:\Users\ozgur\OneDrive\Masaüstü\My 4 layered\Entity\obj\Debug\Entity.pdb

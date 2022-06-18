@@ -1,0 +1,15 @@
+C:\Users\STUDENT2\source\repos\25032022-Kapsulleme Oteller\bin\Debug\25032022-Kapsulleme Oteller.exe.config
+C:\Users\STUDENT2\source\repos\25032022-Kapsulleme Oteller\bin\Debug\25032022-Kapsulleme Oteller.exe
+C:\Users\STUDENT2\source\repos\25032022-Kapsulleme Oteller\bin\Debug\25032022-Kapsulleme Oteller.pdb
+C:\Users\STUDENT2\source\repos\25032022-Kapsulleme Oteller\obj\Debug\25032022-Kapsulleme Oteller.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\source\repos\25032022-Kapsulleme Oteller\obj\Debug\25032022-Kapsulleme Oteller.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\source\repos\25032022-Kapsulleme Oteller\obj\Debug\25032022-Kapsulleme Oteller.exe
+C:\Users\STUDENT2\source\repos\25032022-Kapsulleme Oteller\obj\Debug\25032022-Kapsulleme Oteller.pdb
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapsulleme Oteller\bin\Debug\25032022-Kapsulleme Oteller.exe.config
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapsulleme Oteller\bin\Debug\25032022-Kapsulleme Oteller.exe
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapsulleme Oteller\bin\Debug\25032022-Kapsulleme Oteller.pdb
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapsulleme Oteller\obj\Debug\25032022-Kapsulleme Oteller.csproj.AssemblyReference.cache
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapsulleme Oteller\obj\Debug\25032022-Kapsulleme Oteller.csproj.SuggestedBindingRedirects.cache
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapsulleme Oteller\obj\Debug\25032022-Kapsulleme Oteller.csproj.CoreCompileInputs.cache
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapsulleme Oteller\obj\Debug\25032022-Kapsulleme Oteller.exe
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapsulleme Oteller\obj\Debug\25032022-Kapsulleme Oteller.pdb

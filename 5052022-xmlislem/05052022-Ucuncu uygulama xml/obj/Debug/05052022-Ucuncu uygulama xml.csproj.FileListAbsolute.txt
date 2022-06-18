@@ -1,0 +1,22 @@
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\05052022-Ucuncu uygulama xml\bin\Debug\05052022-Ucuncu uygulama xml.exe.config
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\05052022-Ucuncu uygulama xml\bin\Debug\05052022-Ucuncu uygulama xml.exe
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\05052022-Ucuncu uygulama xml\bin\Debug\05052022-Ucuncu uygulama xml.pdb
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\05052022-Ucuncu uygulama xml.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\05052022-Ucuncu uygulama xml.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\_05052022_Ucuncu_uygulama_xml.Form1.resources
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\_05052022_Ucuncu_uygulama_xml.Properties.Resources.resources
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\05052022-Ucuncu uygulama xml.csproj.GenerateResource.cache
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\05052022-Ucuncu uygulama xml.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\05052022-Ucuncu uygulama xml.exe
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\05052022-Ucuncu uygulama xml.pdb
+C:\Users\ozgur\OneDrive\Masaüstü\5052022-xmlislem\05052022-Ucuncu uygulama xml\bin\Debug\05052022-Ucuncu uygulama xml.exe.config
+C:\Users\ozgur\OneDrive\Masaüstü\5052022-xmlislem\05052022-Ucuncu uygulama xml\bin\Debug\05052022-Ucuncu uygulama xml.exe
+C:\Users\ozgur\OneDrive\Masaüstü\5052022-xmlislem\05052022-Ucuncu uygulama xml\bin\Debug\05052022-Ucuncu uygulama xml.pdb
+C:\Users\ozgur\OneDrive\Masaüstü\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\05052022-Ucuncu uygulama xml.csproj.AssemblyReference.cache
+C:\Users\ozgur\OneDrive\Masaüstü\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\05052022-Ucuncu uygulama xml.csproj.SuggestedBindingRedirects.cache
+C:\Users\ozgur\OneDrive\Masaüstü\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\_05052022_Ucuncu_uygulama_xml.Form1.resources
+C:\Users\ozgur\OneDrive\Masaüstü\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\_05052022_Ucuncu_uygulama_xml.Properties.Resources.resources
+C:\Users\ozgur\OneDrive\Masaüstü\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\05052022-Ucuncu uygulama xml.csproj.GenerateResource.cache
+C:\Users\ozgur\OneDrive\Masaüstü\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\05052022-Ucuncu uygulama xml.csproj.CoreCompileInputs.cache
+C:\Users\ozgur\OneDrive\Masaüstü\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\05052022-Ucuncu uygulama xml.exe
+C:\Users\ozgur\OneDrive\Masaüstü\5052022-xmlislem\05052022-Ucuncu uygulama xml\obj\Debug\05052022-Ucuncu uygulama xml.pdb

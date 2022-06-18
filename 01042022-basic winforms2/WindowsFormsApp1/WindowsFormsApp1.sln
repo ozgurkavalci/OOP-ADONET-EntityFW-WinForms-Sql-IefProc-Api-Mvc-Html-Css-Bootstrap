@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32319.34
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1.csproj", "{EF7003D5-4584-43D6-BCED-434A4CA05F5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp2Maas-mesai", "..\WindowsFormsApp2Maas-mesai\WindowsFormsApp2Maas-mesai.csproj", "{7045CF40-7E82-4104-965A-7CFE70536614}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp2-Maas sonrası yeni örnek", "..\WindowsFormsApp2-Maas sonrası yeni örnek\WindowsFormsApp2-Maas sonrası yeni örnek.csproj", "{1CAB8FB6-37EA-42CC-9326-DABFA9CBB9DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp22", "..\WindowsFormsApp22\WindowsFormsApp22.csproj", "{9B3401B5-2741-4F09-AE84-3A2EFFFC0D12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp2EMLAKörneği", "..\WindowsFormsApp2EMLAKörneği\WindowsFormsApp2EMLAKörneği.csproj", "{3AAAA957-1537-4220-8C38-813FF8F7081A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp2MusterıADSOYAD", "..\WindowsFormsApp2MusterıADSOYAD\WindowsFormsApp2MusterıADSOYAD.csproj", "{C6A0FBFD-C069-4036-8D4C-A7CFA595079D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF7003D5-4584-43D6-BCED-434A4CA05F5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7003D5-4584-43D6-BCED-434A4CA05F5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7003D5-4584-43D6-BCED-434A4CA05F5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7003D5-4584-43D6-BCED-434A4CA05F5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7045CF40-7E82-4104-965A-7CFE70536614}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7045CF40-7E82-4104-965A-7CFE70536614}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7045CF40-7E82-4104-965A-7CFE70536614}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7045CF40-7E82-4104-965A-7CFE70536614}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1CAB8FB6-37EA-42CC-9326-DABFA9CBB9DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1CAB8FB6-37EA-42CC-9326-DABFA9CBB9DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1CAB8FB6-37EA-42CC-9326-DABFA9CBB9DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1CAB8FB6-37EA-42CC-9326-DABFA9CBB9DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B3401B5-2741-4F09-AE84-3A2EFFFC0D12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B3401B5-2741-4F09-AE84-3A2EFFFC0D12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B3401B5-2741-4F09-AE84-3A2EFFFC0D12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B3401B5-2741-4F09-AE84-3A2EFFFC0D12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AAAA957-1537-4220-8C38-813FF8F7081A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AAAA957-1537-4220-8C38-813FF8F7081A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AAAA957-1537-4220-8C38-813FF8F7081A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AAAA957-1537-4220-8C38-813FF8F7081A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6A0FBFD-C069-4036-8D4C-A7CFA595079D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6A0FBFD-C069-4036-8D4C-A7CFA595079D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6A0FBFD-C069-4036-8D4C-A7CFA595079D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6A0FBFD-C069-4036-8D4C-A7CFA595079D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {661B6B63-127B-463C-9ED9-0B40EB6E0485}
+	EndGlobalSection
+EndGlobal

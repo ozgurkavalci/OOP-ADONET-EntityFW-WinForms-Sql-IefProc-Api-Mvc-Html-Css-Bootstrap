@@ -1,0 +1,16 @@
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\bin\Debug\WindowsFormsApp118042022-Entity ilk örnek.exe.config
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\bin\Debug\WindowsFormsApp118042022-Entity ilk örnek.exe
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\bin\Debug\WindowsFormsApp118042022-Entity ilk örnek.pdb
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\bin\Debug\EntityFramework.dll
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\bin\Debug\EntityFramework.xml
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\obj\Debug\WindowsFormsApp118042022-Entity ilk örnek.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\obj\Debug\WindowsFormsApp118042022-Entity ilk örnek.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\obj\Debug\WindowsFormsApp118042022_Entity_ilk_örnek.Form1.resources
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\obj\Debug\WindowsFormsApp118042022_Entity_ilk_örnek.Properties.Resources.resources
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\obj\Debug\WindowsFormsApp118042022-Entity ilk örnek.csproj.GenerateResource.cache
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\obj\Debug\WindowsFormsApp118042022-Entity ilk örnek.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\obj\Debug\WindowsFormsApp118042022-Entity ilk örnek.csproj.CopyComplete
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\obj\Debug\WindowsFormsApp118042022-Entity ilk örnek.exe
+C:\Users\STUDENT2\Desktop\18042022\WindowsFormsApp118042022-Entity ilk örnek\obj\Debug\WindowsFormsApp118042022-Entity ilk örnek.pdb

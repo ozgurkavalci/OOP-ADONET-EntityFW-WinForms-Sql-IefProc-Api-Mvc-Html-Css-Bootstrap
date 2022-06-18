@@ -1,0 +1,7 @@
+﻿<RootNode>
+  <Mamüller UrunID="1" UrunAdi="Chai" BirimFiyati="18.0000" />
+  <Mamüller UrunID="2" UrunAdi="Chang" BirimFiyati="19.0000" />
+  <Mamüller UrunID="3" UrunAdi="Aniseed Syrup" BirimFiyati="10.0000" />
+  <Mamüller UrunID="4" UrunAdi="Chef Anton's Cajun Seasoning" BirimFiyati="22.0000" />
+  <Mamüller UrunID="5" UrunAdi="Chef Anton's Gumbo Mix" BirimFiyati="21.3500" />
+</RootNode>

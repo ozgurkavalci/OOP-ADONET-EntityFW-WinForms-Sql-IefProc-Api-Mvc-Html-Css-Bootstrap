@@ -1,0 +1,7 @@
+C:\Users\STUDENT2\source\repos\25032022-Object Oriented Programming (nesneye yönelimli programlama)\bin\Debug\25032022-Object Oriented Programming (nesneye yönelimli programlama).exe.config
+C:\Users\STUDENT2\source\repos\25032022-Object Oriented Programming (nesneye yönelimli programlama)\bin\Debug\25032022-Object Oriented Programming (nesneye yönelimli programlama).exe
+C:\Users\STUDENT2\source\repos\25032022-Object Oriented Programming (nesneye yönelimli programlama)\bin\Debug\25032022-Object Oriented Programming (nesneye yönelimli programlama).pdb
+C:\Users\STUDENT2\source\repos\25032022-Object Oriented Programming (nesneye yönelimli programlama)\obj\Debug\25032022-Object Oriented Programming (nesneye yönelimli programlama).csproj.AssemblyReference.cache
+C:\Users\STUDENT2\source\repos\25032022-Object Oriented Programming (nesneye yönelimli programlama)\obj\Debug\25032022-Object Oriented Programming (nesneye yönelimli programlama).csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\source\repos\25032022-Object Oriented Programming (nesneye yönelimli programlama)\obj\Debug\25032022-Object Oriented Programming (nesneye yönelimli programlama).exe
+C:\Users\STUDENT2\source\repos\25032022-Object Oriented Programming (nesneye yönelimli programlama)\obj\Debug\25032022-Object Oriented Programming (nesneye yönelimli programlama).pdb

@@ -1,0 +1,8 @@
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\28032022-Abstract Classlar\bin\Debug\28032022-Abstract Classlar.exe.config
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\28032022-Abstract Classlar\bin\Debug\28032022-Abstract Classlar.exe
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\28032022-Abstract Classlar\bin\Debug\28032022-Abstract Classlar.pdb
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\28032022-Abstract Classlar\obj\Debug\28032022-Abstract Classlar.csproj.AssemblyReference.cache
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\28032022-Abstract Classlar\obj\Debug\28032022-Abstract Classlar.csproj.SuggestedBindingRedirects.cache
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\28032022-Abstract Classlar\obj\Debug\28032022-Abstract Classlar.csproj.CoreCompileInputs.cache
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\28032022-Abstract Classlar\obj\Debug\28032022-Abstract Classlar.exe
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\28032022-Abstract Classlar\obj\Debug\28032022-Abstract Classlar.pdb

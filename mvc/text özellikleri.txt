@@ -1,0 +1,74 @@
+Metin özellikleri
+Özellik	Anlamý
+
+color	Metnin rengini atama iþlemini gerçekleþtirir.
+
+direction	Metnin yazma yönünü belirler.
+
+letter-spacing	Metindeki karakterler arasýndaki boþluklarý artýrýr ya da azaltýr.
+
+line-height	
+Satýr yüksekliðini atama iþlemini gerçekleþtirir.
+
+text-align	Metnin yatay konumlandýrýlmasýný belirler.
+
+text-align özelliði ve aldýðý deðerler
+Deðer	Açýklama
+
+center	yazýyý ortalar.
+right	yazýyý saða dayar.
+left	yazýyý sola dayar(varsayýlaný budur)
+justify	iki yana yaslar
+
+
+
+
+
+text-decoration	Metne eklenecek dekorasyonu belirler.
+
+text-decoration:overline /* Metin Üstü Çizgi */
+
+
+text-decoration:line-through /* Üzeri Çizili Metin */
+
+
+text-decoration:underline /* Altý Çizili Metin */
+
+none ise alt çizgili yazýyý kaldýrýr
+
+
+
+text-indent
+
+Bir metin bloðundaki ilk satýrýn ne kadar içerden baþlayacaðýný belirler.
+
+text-shadow
+
+Metne eklenecek gölge etkisini belirler.
+
+text-transform
+
+Metnin büyük-küçük harf durumunu belirler.
+
+vertical-align
+
+Bir elemanýn düþey yerleþimini belirler.
+
+white-space
+
+Eleman içinde alfabe dýþý karakterlerin nasýl iþlem göreceðini belirler.
+
+word-spacing	Bir metinde kelimeler arasýnda bulunan boþluk sayýsýný artýrýr ya da azaltýr.
+
+
+
+
+Metin dönüþümü
+Metin dönüþüm (text-transform) özelliði, metin içinde büyük harf ve küçük harf karakterleri belirlemek için kullanýlýr.
+ Ya karakterler büyük harfe veya küçük harfe çevrilir ya da her kelimenin ilk harfi büyük harf yapýlýr.
+
+text-transform: uppercase;
+text-transform: lowercase;
+text-transform: capitalize;
+
+ 

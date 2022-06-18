@@ -1,0 +1,9 @@
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\Facade\bin\Debug\Facade.dll
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\Facade\bin\Debug\Facade.pdb
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\Facade\bin\Debug\Entity.dll
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\Facade\bin\Debug\Entity.pdb
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\Facade\obj\Debug\Facade.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\Facade\obj\Debug\Facade.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\Facade\obj\Debug\Facade.csproj.CopyComplete
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\Facade\obj\Debug\Facade.dll
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\Facade\obj\Debug\Facade.pdb

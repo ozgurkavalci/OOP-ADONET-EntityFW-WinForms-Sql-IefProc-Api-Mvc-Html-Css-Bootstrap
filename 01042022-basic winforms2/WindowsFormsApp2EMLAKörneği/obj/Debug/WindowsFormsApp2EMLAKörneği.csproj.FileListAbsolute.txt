@@ -1,0 +1,15 @@
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2EMLAKörneği\bin\Debug\WindowsFormsApp2EMLAKörneği.exe.config
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2EMLAKörneği\bin\Debug\WindowsFormsApp2EMLAKörneği.exe
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2EMLAKörneği\bin\Debug\WindowsFormsApp2EMLAKörneği.pdb
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2EMLAKörneği\obj\Debug\WindowsFormsApp2EMLAKörneği.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2EMLAKörneği\obj\Debug\WindowsFormsApp2EMLAKörneği.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2EMLAKörneği\obj\Debug\WindowsFormsApp2EMLAKörneği.Apartmanbil.resources
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2EMLAKörneği\obj\Debug\WindowsFormsApp2EMLAKörneği.Dubleks.resources
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2EMLAKörneği\obj\Debug\WindowsFormsApp2EMLAKörneği.Form1.resources
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2EMLAKörneği\obj\Debug\WindowsFormsApp2EMLAKörneği.Form2.resources
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2EMLAKörneği\obj\Debug\WindowsFormsApp2EMLAKörneği.Properties.Resources.resources
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2EMLAKörneği\obj\Debug\WindowsFormsApp2EMLAKörneği.SonucEkranı.resources
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2EMLAKörneği\obj\Debug\WindowsFormsApp2EMLAKörneği.csproj.GenerateResource.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2EMLAKörneği\obj\Debug\WindowsFormsApp2EMLAKörneği.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2EMLAKörneği\obj\Debug\WindowsFormsApp2EMLAKörneği.exe
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2EMLAKörneği\obj\Debug\WindowsFormsApp2EMLAKörneği.pdb

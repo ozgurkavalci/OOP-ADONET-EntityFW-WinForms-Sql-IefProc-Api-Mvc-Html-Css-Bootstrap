@@ -1,0 +1,15 @@
+C:\Users\STUDENT2\source\repos\24032022-Departmanlar\bin\Debug\24032022-Departmanlar.exe.config
+C:\Users\STUDENT2\source\repos\24032022-Departmanlar\bin\Debug\24032022-Departmanlar.exe
+C:\Users\STUDENT2\source\repos\24032022-Departmanlar\bin\Debug\24032022-Departmanlar.pdb
+C:\Users\STUDENT2\source\repos\24032022-Departmanlar\obj\Debug\24032022-Departmanlar.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\source\repos\24032022-Departmanlar\obj\Debug\24032022-Departmanlar.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\source\repos\24032022-Departmanlar\obj\Debug\24032022-Departmanlar.exe
+C:\Users\STUDENT2\source\repos\24032022-Departmanlar\obj\Debug\24032022-Departmanlar.pdb
+C:\Users\ozgur\OneDrive\Masaüstü\24032022-Departmanlar\bin\Debug\24032022-Departmanlar.exe.config
+C:\Users\ozgur\OneDrive\Masaüstü\24032022-Departmanlar\bin\Debug\24032022-Departmanlar.exe
+C:\Users\ozgur\OneDrive\Masaüstü\24032022-Departmanlar\bin\Debug\24032022-Departmanlar.pdb
+C:\Users\ozgur\OneDrive\Masaüstü\24032022-Departmanlar\obj\Debug\24032022-Departmanlar.csproj.AssemblyReference.cache
+C:\Users\ozgur\OneDrive\Masaüstü\24032022-Departmanlar\obj\Debug\24032022-Departmanlar.csproj.SuggestedBindingRedirects.cache
+C:\Users\ozgur\OneDrive\Masaüstü\24032022-Departmanlar\obj\Debug\24032022-Departmanlar.csproj.CoreCompileInputs.cache
+C:\Users\ozgur\OneDrive\Masaüstü\24032022-Departmanlar\obj\Debug\24032022-Departmanlar.exe
+C:\Users\ozgur\OneDrive\Masaüstü\24032022-Departmanlar\obj\Debug\24032022-Departmanlar.pdb

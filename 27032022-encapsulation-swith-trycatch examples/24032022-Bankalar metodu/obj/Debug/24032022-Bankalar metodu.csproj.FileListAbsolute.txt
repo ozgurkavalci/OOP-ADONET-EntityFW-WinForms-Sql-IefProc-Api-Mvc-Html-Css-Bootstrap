@@ -1,0 +1,7 @@
+C:\Users\STUDENT2\source\repos\24032022-Bankalar metodu\bin\Debug\24032022-Bankalar metodu.exe.config
+C:\Users\STUDENT2\source\repos\24032022-Bankalar metodu\bin\Debug\24032022-Bankalar metodu.exe
+C:\Users\STUDENT2\source\repos\24032022-Bankalar metodu\bin\Debug\24032022-Bankalar metodu.pdb
+C:\Users\STUDENT2\source\repos\24032022-Bankalar metodu\obj\Debug\24032022-Bankalar metodu.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\source\repos\24032022-Bankalar metodu\obj\Debug\24032022-Bankalar metodu.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\source\repos\24032022-Bankalar metodu\obj\Debug\24032022-Bankalar metodu.exe
+C:\Users\STUDENT2\source\repos\24032022-Bankalar metodu\obj\Debug\24032022-Bankalar metodu.pdb

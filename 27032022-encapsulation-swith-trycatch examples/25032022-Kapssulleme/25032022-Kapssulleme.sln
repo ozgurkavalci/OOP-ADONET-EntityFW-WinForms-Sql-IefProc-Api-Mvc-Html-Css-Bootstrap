@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "25032022-Kapssulleme", "25032022-Kapssulleme.csproj", "{2E702C99-9B0E-42EE-B5BC-84F0B2CEBE94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "25032022-Kapsulleme Oteller", "..\25032022-Kapsulleme Oteller\25032022-Kapsulleme Oteller.csproj", "{0E357861-B093-4168-ACE3-B0FDFDE87542}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2E702C99-9B0E-42EE-B5BC-84F0B2CEBE94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E702C99-9B0E-42EE-B5BC-84F0B2CEBE94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E702C99-9B0E-42EE-B5BC-84F0B2CEBE94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E702C99-9B0E-42EE-B5BC-84F0B2CEBE94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E357861-B093-4168-ACE3-B0FDFDE87542}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E357861-B093-4168-ACE3-B0FDFDE87542}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E357861-B093-4168-ACE3-B0FDFDE87542}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E357861-B093-4168-ACE3-B0FDFDE87542}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8B978A66-3612-4FFE-8FFC-4D0B79EB26BC}
+	EndGlobalSection
+EndGlobal

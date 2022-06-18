@@ -1,0 +1,138 @@
+.genel{
+	width:100%;
+	height:auto;
+    margin:0 auto;
+	
+}
+.ust{width:100%;height:80px;background:#8B4513;}
+.logo  img{
+	width:200px;
+	height:60px;
+	margin-left:10px;
+	margin-top:10px;
+	border-radius:10px; 
+	float:left;	
+}
+.menu{
+	width:500px;
+	height:60px;
+	
+	float:left;
+	margin-top:10px;
+	margin-left:200px;
+	
+}
+.menu ul li{
+	float:left;
+	list-style-type:none;
+	padding:12px;
+	font-size:25px;
+	line-height:10px;
+}
+.menu ul li a{
+color:#fff;
+text-decoration:none;	
+	
+}
+
+.menu ul li a:hover{
+
+color:#D4C8C9;
+
+}
+.icon{
+width:80px;
+height:40px;
+float:right;
+margin-right:120px;
+margin-top:-50px;	
+}
+.icon img{
+	width:40px;
+	height:40px;
+	float:left;
+
+	
+}
+.icerik{
+	width:100%;
+	height:auto;
+		
+}
+.manzara1 img{
+width:100%;
+height:400px;	
+margin-top:10px;
+}
+.giris h1{
+	color:#008000;
+	font-size:35px;
+	
+}
+
+
+
+.hakkimizda{
+	height: 300px;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+   
+	
+}
+
+.hakkimizda1{
+
+    float: left;
+    height: 250px;
+    width: 15%;
+    margin: 10px;
+  
+   
+}
+.hakkimizda2{
+
+    float: left;
+    height: 250px;
+    width:60%;
+    margin: 10px;
+    background:#8B4513;
+   
+}
+.hakkimizda3{
+
+    float: left;
+    height: 250px;
+    width: 15%;
+    margin: 10px;
+  
+   
+}
+
+.hakkimizda2 p{
+ 
+	font-size:15px;
+	margin-left:10px;
+	margin-top:20px;
+    color:#fff;
+	
+}
+.alt{
+    width:100%;
+    height:100px;
+background:#8B4513;
+
+		
+}
+.alt h3{
+	
+	
+	color:#fff;
+	padding-top:50px;
+	padding-left:50px;
+	
+}
+
+
+
+

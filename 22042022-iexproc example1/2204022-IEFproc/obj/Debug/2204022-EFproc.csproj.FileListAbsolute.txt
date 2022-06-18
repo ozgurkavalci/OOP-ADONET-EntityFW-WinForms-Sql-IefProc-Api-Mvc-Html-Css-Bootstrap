@@ -1,0 +1,16 @@
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\bin\Debug\2204022-EFproc.exe.config
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\bin\Debug\2204022-EFproc.exe
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\bin\Debug\2204022-EFproc.pdb
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\bin\Debug\EntityFramework.dll
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\bin\Debug\EntityFramework.xml
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\obj\Debug\2204022-EFproc.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\obj\Debug\2204022-EFproc.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\obj\Debug\_2204022_EFproc.Form1.resources
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\obj\Debug\_2204022_EFproc.Properties.Resources.resources
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\obj\Debug\2204022-EFproc.csproj.GenerateResource.cache
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\obj\Debug\2204022-EFproc.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\obj\Debug\2204022-EFproc.csproj.CopyComplete
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\obj\Debug\2204022-EFproc.exe
+C:\Users\STUDENT2\Desktop\22042022-\2204022-EFproc\obj\Debug\2204022-EFproc.pdb

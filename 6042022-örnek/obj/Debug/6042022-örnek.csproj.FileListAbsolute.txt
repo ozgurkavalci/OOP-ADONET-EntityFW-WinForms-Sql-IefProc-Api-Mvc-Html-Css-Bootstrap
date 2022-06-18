@@ -1,0 +1,13 @@
+C:\Users\STUDENT2\Desktop\6042022-örnek\bin\Debug\6042022-örnek.exe.config
+C:\Users\STUDENT2\Desktop\6042022-örnek\bin\Debug\6042022-örnek.exe
+C:\Users\STUDENT2\Desktop\6042022-örnek\bin\Debug\6042022-örnek.pdb
+C:\Users\STUDENT2\Desktop\6042022-örnek\obj\Debug\6042022-örnek.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\6042022-örnek\obj\Debug\6042022-örnek.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\6042022-örnek\obj\Debug\_6042022_örnek.Form1.resources
+C:\Users\STUDENT2\Desktop\6042022-örnek\obj\Debug\_6042022_örnek.Kategoriler.resources
+C:\Users\STUDENT2\Desktop\6042022-örnek\obj\Debug\_6042022_örnek.KullanıcıOlustur.resources
+C:\Users\STUDENT2\Desktop\6042022-örnek\obj\Debug\_6042022_örnek.Properties.Resources.resources
+C:\Users\STUDENT2\Desktop\6042022-örnek\obj\Debug\6042022-örnek.csproj.GenerateResource.cache
+C:\Users\STUDENT2\Desktop\6042022-örnek\obj\Debug\6042022-örnek.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\6042022-örnek\obj\Debug\6042022-örnek.exe
+C:\Users\STUDENT2\Desktop\6042022-örnek\obj\Debug\6042022-örnek.pdb

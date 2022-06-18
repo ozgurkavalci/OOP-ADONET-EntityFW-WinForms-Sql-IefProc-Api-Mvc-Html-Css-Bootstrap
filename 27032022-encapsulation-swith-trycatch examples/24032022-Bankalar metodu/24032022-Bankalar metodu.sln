@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32126.315
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24032022-Bankalar metodu", "24032022-Bankalar metodu.csproj", "{DD243755-C2B5-4BC2-B57D-1DE50DF58829}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24032022-Method Kurumsal firma örnek", "..\24032022-Method Kurumsal firma örnek\24032022-Method Kurumsal firma örnek.csproj", "{B5F1F26C-E268-4F2C-8CEE-B26F3D1276C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24032022-Kıfayet,aksesuarrrr", "..\24032022-Kıfayet,aksesuarrrr\24032022-Kıfayet,aksesuarrrr.csproj", "{0DEED588-1EA4-4C56-95C4-6AB9360BE62A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24032022-yiyecek icecek", "..\24032022-yiyecek icecek\24032022-yiyecek icecek.csproj", "{F895B0A9-AD8E-4B17-B2F9-A980F7631ED3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "24032022-Departmanlar", "..\24032022-Departmanlar\24032022-Departmanlar.csproj", "{E1616DC6-C3A0-4BA3-BF1C-5ECFC926FDB7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DD243755-C2B5-4BC2-B57D-1DE50DF58829}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD243755-C2B5-4BC2-B57D-1DE50DF58829}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD243755-C2B5-4BC2-B57D-1DE50DF58829}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD243755-C2B5-4BC2-B57D-1DE50DF58829}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5F1F26C-E268-4F2C-8CEE-B26F3D1276C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5F1F26C-E268-4F2C-8CEE-B26F3D1276C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5F1F26C-E268-4F2C-8CEE-B26F3D1276C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5F1F26C-E268-4F2C-8CEE-B26F3D1276C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DEED588-1EA4-4C56-95C4-6AB9360BE62A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DEED588-1EA4-4C56-95C4-6AB9360BE62A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DEED588-1EA4-4C56-95C4-6AB9360BE62A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DEED588-1EA4-4C56-95C4-6AB9360BE62A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F895B0A9-AD8E-4B17-B2F9-A980F7631ED3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F895B0A9-AD8E-4B17-B2F9-A980F7631ED3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F895B0A9-AD8E-4B17-B2F9-A980F7631ED3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F895B0A9-AD8E-4B17-B2F9-A980F7631ED3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1616DC6-C3A0-4BA3-BF1C-5ECFC926FDB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1616DC6-C3A0-4BA3-BF1C-5ECFC926FDB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1616DC6-C3A0-4BA3-BF1C-5ECFC926FDB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1616DC6-C3A0-4BA3-BF1C-5ECFC926FDB7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2EF1CCCD-D485-4F49-B985-A16F686C30E5}
+	EndGlobalSection
+EndGlobal

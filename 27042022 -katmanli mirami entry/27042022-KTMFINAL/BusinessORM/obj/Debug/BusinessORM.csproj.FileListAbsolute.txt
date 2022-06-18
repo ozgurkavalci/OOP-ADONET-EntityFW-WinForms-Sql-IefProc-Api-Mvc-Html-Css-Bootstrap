@@ -1,0 +1,6 @@
+C:\Users\STUDENT2\Desktop\27042022\27042022-KTMFINAL\BusinessORM\bin\Debug\BusinessORM.dll
+C:\Users\STUDENT2\Desktop\27042022\27042022-KTMFINAL\BusinessORM\bin\Debug\BusinessORM.pdb
+C:\Users\STUDENT2\Desktop\27042022\27042022-KTMFINAL\BusinessORM\obj\Debug\BusinessORM.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\27042022\27042022-KTMFINAL\BusinessORM\obj\Debug\BusinessORM.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\27042022\27042022-KTMFINAL\BusinessORM\obj\Debug\BusinessORM.dll
+C:\Users\STUDENT2\Desktop\27042022\27042022-KTMFINAL\BusinessORM\obj\Debug\BusinessORM.pdb

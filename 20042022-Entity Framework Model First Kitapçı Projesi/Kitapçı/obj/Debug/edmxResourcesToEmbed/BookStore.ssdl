@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BookStore.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="BookStoreStoreContainer">
+    <EntitySet Name="Musteri" EntityType="BookStore.Store.Musteri" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Urun" EntityType="BookStore.Store.Urun" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sube" EntityType="BookStore.Store.Sube" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Personel" EntityType="BookStore.Store.Personel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Kullanici" EntityType="BookStore.Store.Kullanici" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UrunSube" Association="BookStore.Store.UrunSube">
+      <End Role="Urun" EntitySet="Urun" />
+      <End Role="Sube" EntitySet="Sube" />
+    </AssociationSet>
+    <AssociationSet Name="SubePersonel" Association="BookStore.Store.SubePersonel">
+      <End Role="Sube" EntitySet="Sube" />
+      <End Role="Personel" EntitySet="Personel" />
+    </AssociationSet>
+    <AssociationSet Name="MusteriUrun" Association="BookStore.Store.MusteriUrun">
+      <End Role="Musteri" EntitySet="Musteri" />
+      <End Role="Urun" EntitySet="Urun" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Musteri">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+    </Key>
+    <Property Name="MusteriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriAdSoyad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MusteriTcNO" Type="nchar" Nullable="false" MaxLength="11" />
+    <Property Name="MusteriMail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MusteriTelefon" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="MusteriAdres" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Urun">
+    <Key>
+      <PropertyRef Name="UrunID" />
+    </Key>
+    <Property Name="UrunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrunTuru" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UrunKategori" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UrunCikisYili" Type="int" Nullable="false" />
+    <Property Name="UrunYazarAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UrunAdet" Type="int" Nullable="false" />
+    <Property Name="UrunFiyat" Type="decimal" Nullable="false" />
+    <Property Name="MusteriMusteriID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sube">
+    <Key>
+      <PropertyRef Name="SubeID" />
+    </Key>
+    <Property Name="SubeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubeAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SubeCiro" Type="decimal" Nullable="false" />
+    <Property Name="SubePersonelSayisi" Type="int" Nullable="false" />
+    <Property Name="UrunUrunID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Personel">
+    <Key>
+      <PropertyRef Name="PersonelID" />
+    </Key>
+    <Property Name="PersonelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonelAdSoyad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PersonelTcNo" Type="nchar" Nullable="false" MaxLength="11" />
+    <Property Name="PersonelYas" Type="int" Nullable="false" />
+    <Property Name="PersonelMail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PersonelTelefon" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="PersonelAdres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SubeSubeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="KullaniciID" />
+    </Key>
+    <Property Name="KullaniciID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="KullaniciSifre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="KullaniciMail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="KulllaniciTelefon" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="UrunSube">
+    <End Role="Urun" Type="BookStore.Store.Urun" Multiplicity="1" />
+    <End Role="Sube" Type="BookStore.Store.Sube" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urun">
+        <PropertyRef Name="UrunID" />
+      </Principal>
+      <Dependent Role="Sube">
+        <PropertyRef Name="UrunUrunID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SubePersonel">
+    <End Role="Sube" Type="BookStore.Store.Sube" Multiplicity="1" />
+    <End Role="Personel" Type="BookStore.Store.Personel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sube">
+        <PropertyRef Name="SubeID" />
+      </Principal>
+      <Dependent Role="Personel">
+        <PropertyRef Name="SubeSubeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MusteriUrun">
+    <End Role="Musteri" Type="BookStore.Store.Musteri" Multiplicity="1" />
+    <End Role="Urun" Type="BookStore.Store.Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteri">
+        <PropertyRef Name="MusteriID" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="MusteriMusteriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

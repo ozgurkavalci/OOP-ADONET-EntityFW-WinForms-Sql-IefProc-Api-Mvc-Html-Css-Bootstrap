@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0fe152b53f0f415a9865d026ff6b1106" Name="Diagram1">
+        <EntityTypeShape EntityType="NorthwindModel.Bolge" Width="1.5" PointX="0.75" PointY="2.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Bolgeler" Width="1.5" PointX="3" PointY="2.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Kategoriler" Width="1.5" PointX="5.25" PointY="15" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.MusteriDemographic" Width="1.5" PointX="3" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Musteriler" Width="1.5" PointX="5.25" PointY="8" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Nakliyeciler" Width="1.5" PointX="5.25" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Personeller" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Satis_Detaylari" Width="1.5" PointX="9.75" PointY="2.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Satislar" Width="1.5" PointX="7.5" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.sysdiagram" Width="1.5" PointX="0.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Tedarikciler" Width="1.5" PointX="5.25" PointY="17.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Urunler" Width="1.5" PointX="7.5" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.C1997_Yili_Urun_Satislari" Width="1.5" PointX="7.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Alfabetik_Sirali_Urunler_Listesi" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Ayrintili_Satis_Detaylari" Width="1.5" PointX="7.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Biten_Urunler_Listesi" Width="1.5" PointX="9.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Faturalar" Width="1.5" PointX="11.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Kategorilere_Gore_1997_Yili_Satislari" Width="1.5" PointX="0.75" PointY="11.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Kategorilere_Gore_Satislar" Width="1.5" PointX="11.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Kategorilere_Gore_Urunler" Width="1.5" PointX="11.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Ortalama_Maliyetin_Uzerindeki_Urunler" Width="1.5" PointX="13.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Ozet_Ceyrek_Satislar" Width="1.5" PointX="13.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Ozet_Yillik_Satislar" Width="1.5" PointX="13.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Satis_Alt_Toplamlari" Width="1.5" PointX="7.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Satislar_Sorgusu" Width="1.5" PointX="13.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Satislarin_Toplam_Miktari" Width="1.5" PointX="9.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NorthwindModel.Sehirlere_Gore_Musteri_ve_Tedarikciler" Width="1.5" PointX="0.75" PointY="14.75" IsExpanded="true" />
+        <AssociationConnector Association="NorthwindModel.FK_Bolgeler_Bolge" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.FK_Urunler_Kategoriler" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.FK_Satislar_Musteriler" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.FK_Satislar_Nakliyeciler" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.FK_Personeller_Personeller" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.FK_Satislar_Personeller" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.FK_Order_Details_Satislar" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.FK_Order_Details_Urunler" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.FK_Urunler_Tedarikciler" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.MusteriMusteriDemo" ManuallyRouted="false" />
+        <AssociationConnector Association="NorthwindModel.PersonelBolgeler" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

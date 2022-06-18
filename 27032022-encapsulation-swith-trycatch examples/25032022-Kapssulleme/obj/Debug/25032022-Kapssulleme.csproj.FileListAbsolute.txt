@@ -1,0 +1,15 @@
+C:\Users\STUDENT2\source\repos\25032022-Kapssulleme\bin\Debug\25032022-Kapssulleme.exe.config
+C:\Users\STUDENT2\source\repos\25032022-Kapssulleme\bin\Debug\25032022-Kapssulleme.exe
+C:\Users\STUDENT2\source\repos\25032022-Kapssulleme\bin\Debug\25032022-Kapssulleme.pdb
+C:\Users\STUDENT2\source\repos\25032022-Kapssulleme\obj\Debug\25032022-Kapssulleme.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\source\repos\25032022-Kapssulleme\obj\Debug\25032022-Kapssulleme.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\source\repos\25032022-Kapssulleme\obj\Debug\25032022-Kapssulleme.exe
+C:\Users\STUDENT2\source\repos\25032022-Kapssulleme\obj\Debug\25032022-Kapssulleme.pdb
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapssulleme\bin\Debug\25032022-Kapssulleme.exe.config
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapssulleme\bin\Debug\25032022-Kapssulleme.exe
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapssulleme\bin\Debug\25032022-Kapssulleme.pdb
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapssulleme\obj\Debug\25032022-Kapssulleme.csproj.AssemblyReference.cache
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapssulleme\obj\Debug\25032022-Kapssulleme.csproj.SuggestedBindingRedirects.cache
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapssulleme\obj\Debug\25032022-Kapssulleme.csproj.CoreCompileInputs.cache
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapssulleme\obj\Debug\25032022-Kapssulleme.exe
+C:\Users\ozgur\OneDrive\Masaüstü\kapsul\25032022-Kapssulleme\obj\Debug\25032022-Kapssulleme.pdb

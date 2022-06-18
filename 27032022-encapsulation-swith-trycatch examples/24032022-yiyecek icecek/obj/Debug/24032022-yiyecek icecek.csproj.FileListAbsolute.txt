@@ -1,0 +1,7 @@
+C:\Users\STUDENT2\source\repos\24032022-yiyecek icecek\bin\Debug\24032022-yiyecek icecek.exe.config
+C:\Users\STUDENT2\source\repos\24032022-yiyecek icecek\bin\Debug\24032022-yiyecek icecek.exe
+C:\Users\STUDENT2\source\repos\24032022-yiyecek icecek\bin\Debug\24032022-yiyecek icecek.pdb
+C:\Users\STUDENT2\source\repos\24032022-yiyecek icecek\obj\Debug\24032022-yiyecek icecek.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\source\repos\24032022-yiyecek icecek\obj\Debug\24032022-yiyecek icecek.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\source\repos\24032022-yiyecek icecek\obj\Debug\24032022-yiyecek icecek.exe
+C:\Users\STUDENT2\source\repos\24032022-yiyecek icecek\obj\Debug\24032022-yiyecek icecek.pdb

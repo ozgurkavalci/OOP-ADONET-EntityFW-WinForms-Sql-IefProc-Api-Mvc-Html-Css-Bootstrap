@@ -1,0 +1,12 @@
+C:\Users\STUDENT2\Desktop\Nisan\0104-01\0104-04\bin\Debug\0104-04.exe.config
+C:\Users\STUDENT2\Desktop\Nisan\0104-01\0104-04\bin\Debug\0104-04.exe
+C:\Users\STUDENT2\Desktop\Nisan\0104-01\0104-04\bin\Debug\0104-04.pdb
+C:\Users\STUDENT2\Desktop\Nisan\0104-01\0104-04\obj\Debug\0104-04.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\Nisan\0104-01\0104-04\obj\Debug\0104-04.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\Nisan\0104-01\0104-04\obj\Debug\_0104_04.Form1.resources
+C:\Users\STUDENT2\Desktop\Nisan\0104-01\0104-04\obj\Debug\_0104_04.Form2.resources
+C:\Users\STUDENT2\Desktop\Nisan\0104-01\0104-04\obj\Debug\_0104_04.Properties.Resources.resources
+C:\Users\STUDENT2\Desktop\Nisan\0104-01\0104-04\obj\Debug\0104-04.csproj.GenerateResource.cache
+C:\Users\STUDENT2\Desktop\Nisan\0104-01\0104-04\obj\Debug\0104-04.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\Nisan\0104-01\0104-04\obj\Debug\0104-04.exe
+C:\Users\STUDENT2\Desktop\Nisan\0104-01\0104-04\obj\Debug\0104-04.pdb

@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ServicesModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Hizmetler">
+    <Key>
+      <PropertyRef Name="HizmetNo" />
+    </Key>
+    <Property Name="HizmetNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HizmetAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HizmetTanimi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="HizmetFiyat" Type="Decimal" Precision="19" Scale="4" />
+    <NavigationProperty Name="HizmetOzelliklers" Relationship="Self.FK_HizmetOzellikler_Hizmetler" FromRole="Hizmetler" ToRole="HizmetOzellikler" />
+    <NavigationProperty Name="Musterilers" Relationship="Self.FK_Musteriler_Hizmetler" FromRole="Hizmetler" ToRole="Musteriler" />
+  </EntityType>
+  <EntityType Name="HizmetOzellikler">
+    <Key>
+      <PropertyRef Name="HizmetOzellikNo" />
+    </Key>
+    <Property Name="HizmetOzellikNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HizmetOzellikHizmetNo" Type="Int32" />
+    <Property Name="HizmetAciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HizmetOzellikEkstra" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Hizmetler" Relationship="Self.FK_HizmetOzellikler_Hizmetler" FromRole="HizmetOzellikler" ToRole="Hizmetler" />
+  </EntityType>
+  <EntityType Name="Musteriler">
+    <Key>
+      <PropertyRef Name="MusteriNo" />
+    </Key>
+    <Property Name="MusteriNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriAdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MusteriCinsiyet" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="MusteriTelefon" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MusteriTcNo" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="MusteriAdres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="MusteriHizmetNo" Type="Int32" />
+    <Property Name="MusteriMail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Hizmetler" Relationship="Self.FK_Musteriler_Hizmetler" FromRole="Musteriler" ToRole="Hizmetler" />
+    <NavigationProperty Name="Siparislers" Relationship="Self.FK_Siparisler_Musteriler" FromRole="Musteriler" ToRole="Siparisler" />
+  </EntityType>
+  <EntityType Name="Siparisler">
+    <Key>
+      <PropertyRef Name="SiparisNo" />
+    </Key>
+    <Property Name="SiparisNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SiparisAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SiparisMusteriNo" Type="Int32" />
+    <Property Name="SiparisAdres" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SiparisAciklama" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Musteriler" Relationship="Self.FK_Siparisler_Musteriler" FromRole="Siparisler" ToRole="Musteriler" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_HizmetOzellikler_Hizmetler">
+    <End Role="Hizmetler" Type="Self.Hizmetler" Multiplicity="0..1" />
+    <End Role="HizmetOzellikler" Type="Self.HizmetOzellikler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hizmetler">
+        <PropertyRef Name="HizmetNo" />
+      </Principal>
+      <Dependent Role="HizmetOzellikler">
+        <PropertyRef Name="HizmetOzellikHizmetNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Musteriler_Hizmetler">
+    <End Role="Hizmetler" Type="Self.Hizmetler" Multiplicity="0..1" />
+    <End Role="Musteriler" Type="Self.Musteriler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hizmetler">
+        <PropertyRef Name="HizmetNo" />
+      </Principal>
+      <Dependent Role="Musteriler">
+        <PropertyRef Name="MusteriHizmetNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Siparisler_Musteriler">
+    <End Role="Musteriler" Type="Self.Musteriler" Multiplicity="0..1" />
+    <End Role="Siparisler" Type="Self.Siparisler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteriler">
+        <PropertyRef Name="MusteriNo" />
+      </Principal>
+      <Dependent Role="Siparisler">
+        <PropertyRef Name="SiparisMusteriNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ServicesEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Hizmetlers" EntityType="Self.Hizmetler" />
+    <EntitySet Name="HizmetOzelliklers" EntityType="Self.HizmetOzellikler" />
+    <EntitySet Name="Musterilers" EntityType="Self.Musteriler" />
+    <EntitySet Name="Siparislers" EntityType="Self.Siparisler" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_HizmetOzellikler_Hizmetler" Association="Self.FK_HizmetOzellikler_Hizmetler">
+      <End Role="Hizmetler" EntitySet="Hizmetlers" />
+      <End Role="HizmetOzellikler" EntitySet="HizmetOzelliklers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Musteriler_Hizmetler" Association="Self.FK_Musteriler_Hizmetler">
+      <End Role="Hizmetler" EntitySet="Hizmetlers" />
+      <End Role="Musteriler" EntitySet="Musterilers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Siparisler_Musteriler" Association="Self.FK_Siparisler_Musteriler">
+      <End Role="Musteriler" EntitySet="Musterilers" />
+      <End Role="Siparisler" EntitySet="Siparislers" />
+    </AssociationSet>
+    <FunctionImport Name="HEkle">
+      <Parameter Name="HizmetAdi" Mode="In" Type="String" />
+      <Parameter Name="HizmetTanimi" Mode="In" Type="String" />
+      <Parameter Name="HizmetFiyat" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="HG">
+      <Parameter Name="HizmetNo" Mode="In" Type="Int32" />
+      <Parameter Name="HizmetAdi" Mode="In" Type="String" />
+      <Parameter Name="HizmetTanimi" Mode="In" Type="String" />
+      <Parameter Name="HizmetFiyat" Mode="In" Type="Decimal" />
+    </FunctionImport>
+    <FunctionImport Name="HGor" ReturnType="Collection(ServicesModel.HGor_Result)" />
+    <FunctionImport Name="HOEkle">
+      <Parameter Name="HizmetOzellikHizmetNo" Mode="In" Type="Int32" />
+      <Parameter Name="HizmetAciklama" Mode="In" Type="String" />
+      <Parameter Name="HizmetOzellikEkstra" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="HOG">
+      <Parameter Name="HizmetOzellikNo" Mode="In" Type="Int32" />
+      <Parameter Name="HizmetOzellikHizmetNo" Mode="In" Type="Int32" />
+      <Parameter Name="HizmetAciklama" Mode="In" Type="String" />
+      <Parameter Name="HizmetOzellikEkstra" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="HOGor" ReturnType="Collection(ServicesModel.HOGor_Result)" />
+    <FunctionImport Name="HOSil">
+      <Parameter Name="HizmetOzellikNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="HSil">
+      <Parameter Name="HizmetNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="MEkle">
+      <Parameter Name="MusteriAdSoyad" Mode="In" Type="String" />
+      <Parameter Name="MusteriCinsiyet" Mode="In" Type="String" />
+      <Parameter Name="MusteriTelefon" Mode="In" Type="String" />
+      <Parameter Name="MusteriTcNo" Mode="In" Type="String" />
+      <Parameter Name="MusteriAdres" Mode="In" Type="String" />
+      <Parameter Name="MusteriHizmetNo" Mode="In" Type="Int32" />
+      <Parameter Name="MusteriMail" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="MG">
+      <Parameter Name="MusteriNo" Mode="In" Type="Int32" />
+      <Parameter Name="MusteriAdSoyad" Mode="In" Type="String" />
+      <Parameter Name="MusteriCinsiyet" Mode="In" Type="String" />
+      <Parameter Name="MusteriTelefon" Mode="In" Type="String" />
+      <Parameter Name="MusteriTcNo" Mode="In" Type="String" />
+      <Parameter Name="MusteriAdres" Mode="In" Type="String" />
+      <Parameter Name="MusteriHizmetNo" Mode="In" Type="Int32" />
+      <Parameter Name="MusteriMail" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="MGor" ReturnType="Collection(ServicesModel.MGor_Result)" />
+    <FunctionImport Name="MSil">
+      <Parameter Name="MusteriNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="SEkle">
+      <Parameter Name="SiparisAdi" Mode="In" Type="String" />
+      <Parameter Name="SiparisMusteriNo" Mode="In" Type="Int32" />
+      <Parameter Name="SiparisAdres" Mode="In" Type="String" />
+      <Parameter Name="SiparisAciklama" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SG">
+      <Parameter Name="SiparisNo" Mode="In" Type="Int32" />
+      <Parameter Name="SiparisAdi" Mode="In" Type="String" />
+      <Parameter Name="SiparisMusteriNo" Mode="In" Type="Int32" />
+      <Parameter Name="SiparisAdres" Mode="In" Type="String" />
+      <Parameter Name="SiparisAciklama" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="SGor" ReturnType="Collection(ServicesModel.SGor_Result)" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(ServicesModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(ServicesModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <FunctionImport Name="SSil">
+      <Parameter Name="SiparisNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="HArama" ReturnType="Collection(ServicesModel.HArama_Result)">
+      <Parameter Name="HizmetNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="HGor_Result">
+    <Property Type="Int32" Name="HizmetNo" Nullable="false" />
+    <Property Type="String" Name="HizmetAdi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HizmetTanimi" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="HizmetFiyat" Nullable="true" Precision="19" />
+  </ComplexType>
+  <ComplexType Name="HOGor_Result">
+    <Property Type="Int32" Name="HizmetOzellikNo" Nullable="false" />
+    <Property Type="Int32" Name="HizmetOzellikHizmetNo" Nullable="true" />
+    <Property Type="String" Name="HizmetAciklama" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HizmetOzellikEkstra" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="MGor_Result">
+    <Property Type="Int32" Name="MusteriNo" Nullable="false" />
+    <Property Type="String" Name="MusteriAdSoyad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="MusteriCinsiyet" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="MusteriTelefon" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="MusteriTcNo" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="MusteriAdres" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="MusteriHizmetNo" Nullable="true" />
+    <Property Type="String" Name="MusteriMail" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="SGor_Result">
+    <Property Type="Int32" Name="SiparisNo" Nullable="false" />
+    <Property Type="String" Name="SiparisAdi" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="SiparisMusteriNo" Nullable="true" />
+    <Property Type="String" Name="SiparisAdres" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="SiparisAciklama" Nullable="true" MaxLength="50" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <ComplexType Name="HArama_Result">
+    <Property Type="Int32" Name="HizmetNo" Nullable="false" />
+    <Property Type="String" Name="HizmetAdi" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="HizmetTanimi" Nullable="true" MaxLength="50" />
+    <Property Type="Decimal" Name="HizmetFiyat" Nullable="true" Precision="19" />
+  </ComplexType>
+</Schema>

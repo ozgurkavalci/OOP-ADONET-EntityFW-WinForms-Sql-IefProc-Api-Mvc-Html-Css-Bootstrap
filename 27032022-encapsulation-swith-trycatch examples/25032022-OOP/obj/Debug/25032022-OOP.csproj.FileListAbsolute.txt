@@ -1,0 +1,6 @@
+C:\Users\STUDENT2\source\repos\25032022-OOP\bin\Debug\25032022-OOP.exe.config
+C:\Users\STUDENT2\source\repos\25032022-OOP\bin\Debug\25032022-OOP.exe
+C:\Users\STUDENT2\source\repos\25032022-OOP\bin\Debug\25032022-OOP.pdb
+C:\Users\STUDENT2\source\repos\25032022-OOP\obj\Debug\25032022-OOP.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\source\repos\25032022-OOP\obj\Debug\25032022-OOP.exe
+C:\Users\STUDENT2\source\repos\25032022-OOP\obj\Debug\25032022-OOP.pdb

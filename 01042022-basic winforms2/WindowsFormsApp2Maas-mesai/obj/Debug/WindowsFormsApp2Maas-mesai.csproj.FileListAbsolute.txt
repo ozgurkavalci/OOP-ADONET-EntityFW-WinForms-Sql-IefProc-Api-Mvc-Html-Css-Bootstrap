@@ -1,0 +1,11 @@
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2Maas-mesai\bin\Debug\WindowsFormsApp2Maas-mesai.exe.config
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2Maas-mesai\bin\Debug\WindowsFormsApp2Maas-mesai.exe
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2Maas-mesai\bin\Debug\WindowsFormsApp2Maas-mesai.pdb
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2Maas-mesai\obj\Debug\WindowsFormsApp2Maas-mesai.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2Maas-mesai\obj\Debug\WindowsFormsApp2Maas-mesai.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2Maas-mesai\obj\Debug\WindowsFormsApp2Maas_mesai.Form1.resources
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2Maas-mesai\obj\Debug\WindowsFormsApp2Maas_mesai.Properties.Resources.resources
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2Maas-mesai\obj\Debug\WindowsFormsApp2Maas-mesai.csproj.GenerateResource.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2Maas-mesai\obj\Debug\WindowsFormsApp2Maas-mesai.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2Maas-mesai\obj\Debug\WindowsFormsApp2Maas-mesai.exe
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2Maas-mesai\obj\Debug\WindowsFormsApp2Maas-mesai.pdb

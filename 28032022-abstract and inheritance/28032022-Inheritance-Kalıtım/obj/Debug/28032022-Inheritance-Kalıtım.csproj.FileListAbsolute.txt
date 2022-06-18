@@ -1,0 +1,8 @@
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\28032022-Inheritance-Kalıtım\bin\Debug\28032022-Inheritance-Kalıtım.exe.config
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\28032022-Inheritance-Kalıtım\bin\Debug\28032022-Inheritance-Kalıtım.exe
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\28032022-Inheritance-Kalıtım\bin\Debug\28032022-Inheritance-Kalıtım.pdb
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\28032022-Inheritance-Kalıtım\obj\Debug\28032022-Inheritance-Kalıtım.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\28032022-Inheritance-Kalıtım\obj\Debug\28032022-Inheritance-Kalıtım.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\28032022-Inheritance-Kalıtım\obj\Debug\28032022-Inheritance-Kalıtım.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\28032022-Inheritance-Kalıtım\obj\Debug\28032022-Inheritance-Kalıtım.exe
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\28032022-Inheritance-Kalıtım\obj\Debug\28032022-Inheritance-Kalıtım.pdb

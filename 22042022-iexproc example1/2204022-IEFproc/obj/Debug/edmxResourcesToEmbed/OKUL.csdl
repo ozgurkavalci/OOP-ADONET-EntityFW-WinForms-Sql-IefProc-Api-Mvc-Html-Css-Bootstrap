@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="OkulModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Ogrenciler">
+    <Key>
+      <PropertyRef Name="OgrenciNo" />
+    </Key>
+    <Property Name="OgrenciNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Adsoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="TcNo" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="Telefon" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Adres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="OkulEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Ogrencilers" EntityType="Self.Ogrenciler" />
+    <FunctionImport Name="OAdd">
+      <Parameter Name="Adsoyad" Mode="In" Type="String" />
+      <Parameter Name="TcNo" Mode="In" Type="String" />
+      <Parameter Name="Telefon" Mode="In" Type="String" />
+      <Parameter Name="Mail" Mode="In" Type="String" />
+      <Parameter Name="Adres" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="OG" ReturnType="Collection(OkulModel.OG_Result)" />
+    <FunctionImport Name="OSL">
+      <Parameter Name="OgrenciNo" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="OY">
+      <Parameter Name="OgrenciNo" Mode="In" Type="Int32" />
+      <Parameter Name="Adsoyad" Mode="In" Type="String" />
+      <Parameter Name="TcNo" Mode="In" Type="String" />
+      <Parameter Name="Telefon" Mode="In" Type="String" />
+      <Parameter Name="Mail" Mode="In" Type="String" />
+      <Parameter Name="Adres" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="OG_Result">
+    <Property Type="Int32" Name="OgrenciNo" Nullable="false" />
+    <Property Type="String" Name="Adsoyad" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="TcNo" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="Telefon" Nullable="true" MaxLength="11" />
+    <Property Type="String" Name="Mail" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="Adres" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>

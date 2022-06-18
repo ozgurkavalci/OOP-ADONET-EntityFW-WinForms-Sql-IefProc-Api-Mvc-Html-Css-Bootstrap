@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="OkulModelStoreContainer" CdmEntityContainer="OkulEntities">
+    <EntitySetMapping Name="Ogrencilers">
+      <EntityTypeMapping TypeName="OkulModel.Ogrenciler">
+        <MappingFragment StoreEntitySet="Ogrenciler">
+          <ScalarProperty Name="OgrenciNo" ColumnName="OgrenciNo" />
+          <ScalarProperty Name="Adsoyad" ColumnName="Adsoyad" />
+          <ScalarProperty Name="TcNo" ColumnName="TcNo" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="OAdd" FunctionName="OkulModel.Store.OAdd" />
+    <FunctionImportMapping FunctionImportName="OG" FunctionName="OkulModel.Store.OG">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="OkulModel.OG_Result">
+          <ScalarProperty Name="OgrenciNo" ColumnName="OgrenciNo" />
+          <ScalarProperty Name="Adsoyad" ColumnName="Adsoyad" />
+          <ScalarProperty Name="TcNo" ColumnName="TcNo" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="Adres" ColumnName="Adres" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="OSL" FunctionName="OkulModel.Store.OSL" />
+    <FunctionImportMapping FunctionImportName="OY" FunctionName="OkulModel.Store.OY" />
+  </EntityContainerMapping>
+</Mapping>

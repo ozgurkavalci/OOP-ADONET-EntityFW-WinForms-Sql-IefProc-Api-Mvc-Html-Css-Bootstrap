@@ -1,0 +1,840 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="NorthwindModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bolge">
+    <Key>
+      <PropertyRef Name="BolgeID" />
+    </Key>
+    <Property Name="BolgeID" Type="int" Nullable="false" />
+    <Property Name="BolgeTanimi" Type="nchar" MaxLength="50" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Bolgeler">
+    <Key>
+      <PropertyRef Name="TerritoryID" />
+    </Key>
+    <Property Name="TerritoryID" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="TerritoryTanimi" Type="nchar" MaxLength="50" Nullable="false" />
+    <Property Name="BolgeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kategoriler">
+    <Key>
+      <PropertyRef Name="KategoriID" />
+    </Key>
+    <Property Name="KategoriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KategoriAdi" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Tanimi" Type="ntext" />
+    <Property Name="Resim" Type="image" />
+  </EntityType>
+  <EntityType Name="MusteriDemographics">
+    <Key>
+      <PropertyRef Name="MusteriTypeID" />
+    </Key>
+    <Property Name="MusteriTypeID" Type="nchar" MaxLength="10" Nullable="false" />
+    <Property Name="MusteriDesc" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Musteriler">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+    </Key>
+    <Property Name="MusteriID" Type="nchar" MaxLength="5" Nullable="false" />
+    <Property Name="SirketAdi" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="MusteriAdi" Type="nvarchar" MaxLength="30" />
+    <Property Name="MusteriUnvani" Type="nvarchar" MaxLength="30" />
+    <Property Name="Adres" Type="nvarchar" MaxLength="60" />
+    <Property Name="Sehir" Type="nvarchar" MaxLength="15" />
+    <Property Name="Bolge" Type="nvarchar" MaxLength="15" />
+    <Property Name="PostaKodu" Type="nvarchar" MaxLength="10" />
+    <Property Name="Ulke" Type="nvarchar" MaxLength="15" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="24" />
+    <Property Name="Faks" Type="nvarchar" MaxLength="24" />
+  </EntityType>
+  <EntityType Name="MusteriMusteriDemo">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+      <PropertyRef Name="MusteriTypeID" />
+    </Key>
+    <Property Name="MusteriID" Type="nchar" MaxLength="5" Nullable="false" />
+    <Property Name="MusteriTypeID" Type="nchar" MaxLength="10" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Nakliyeciler">
+    <Key>
+      <PropertyRef Name="NakliyeciID" />
+    </Key>
+    <Property Name="NakliyeciID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SirketAdi" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="24" />
+  </EntityType>
+  <EntityType Name="PersonelBolgeler">
+    <Key>
+      <PropertyRef Name="PersonelID" />
+      <PropertyRef Name="TerritoryID" />
+    </Key>
+    <Property Name="PersonelID" Type="int" Nullable="false" />
+    <Property Name="TerritoryID" Type="nvarchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Personeller">
+    <Key>
+      <PropertyRef Name="PersonelID" />
+    </Key>
+    <Property Name="PersonelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SoyAdi" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Adi" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Unvan" Type="nvarchar" MaxLength="30" />
+    <Property Name="UnvanEki" Type="nvarchar" MaxLength="25" />
+    <Property Name="DogumTarihi" Type="datetime" />
+    <Property Name="IseBaslamaTarihi" Type="datetime" />
+    <Property Name="Adres" Type="nvarchar" MaxLength="60" />
+    <Property Name="Sehir" Type="nvarchar" MaxLength="15" />
+    <Property Name="Bolge" Type="nvarchar" MaxLength="15" />
+    <Property Name="PostaKodu" Type="nvarchar" MaxLength="10" />
+    <Property Name="Ulke" Type="nvarchar" MaxLength="15" />
+    <Property Name="EvTelefonu" Type="nvarchar" MaxLength="24" />
+    <Property Name="Extension" Type="nvarchar" MaxLength="4" />
+    <Property Name="Fotograf" Type="image" />
+    <Property Name="Notlar" Type="ntext" />
+    <Property Name="BagliCalistigiKisi" Type="int" />
+    <Property Name="FotografPath" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Satis Detaylari">
+    <Key>
+      <PropertyRef Name="SatisID" />
+      <PropertyRef Name="UrunID" />
+    </Key>
+    <Property Name="SatisID" Type="int" Nullable="false" />
+    <Property Name="UrunID" Type="int" Nullable="false" />
+    <Property Name="BirimFiyati" Type="money" Nullable="false" />
+    <Property Name="Miktar" Type="smallint" Nullable="false" />
+    <Property Name="İndirim" Type="real" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Satislar">
+    <Key>
+      <PropertyRef Name="SatisID" />
+    </Key>
+    <Property Name="SatisID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriID" Type="nchar" MaxLength="5" />
+    <Property Name="PersonelID" Type="int" />
+    <Property Name="SatisTarihi" Type="datetime" />
+    <Property Name="OdemeTarihi" Type="datetime" />
+    <Property Name="SevkTarihi" Type="datetime" />
+    <Property Name="ShipVia" Type="int" />
+    <Property Name="NakliyeUcreti" Type="money" />
+    <Property Name="SevkAdi" Type="nvarchar" MaxLength="40" />
+    <Property Name="SevkAdresi" Type="nvarchar" MaxLength="60" />
+    <Property Name="SevkSehri" Type="nvarchar" MaxLength="15" />
+    <Property Name="SevkBolgesi" Type="nvarchar" MaxLength="15" />
+    <Property Name="SevkPostaKodu" Type="nvarchar" MaxLength="10" />
+    <Property Name="SevkUlkesi" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Tedarikciler">
+    <Key>
+      <PropertyRef Name="TedarikciID" />
+    </Key>
+    <Property Name="TedarikciID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SirketAdi" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="MusteriAdi" Type="nvarchar" MaxLength="30" />
+    <Property Name="MusteriUnvani" Type="nvarchar" MaxLength="30" />
+    <Property Name="Adres" Type="nvarchar" MaxLength="60" />
+    <Property Name="Sehir" Type="nvarchar" MaxLength="15" />
+    <Property Name="Bolge" Type="nvarchar" MaxLength="15" />
+    <Property Name="PostaKodu" Type="nvarchar" MaxLength="10" />
+    <Property Name="Ulke" Type="nvarchar" MaxLength="15" />
+    <Property Name="Telefon" Type="nvarchar" MaxLength="24" />
+    <Property Name="Faks" Type="nvarchar" MaxLength="24" />
+    <Property Name="WebSayfasi" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Urunler">
+    <Key>
+      <PropertyRef Name="UrunID" />
+    </Key>
+    <Property Name="UrunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="TedarikciID" Type="int" />
+    <Property Name="KategoriID" Type="int" />
+    <Property Name="BirimdekiMiktar" Type="nvarchar" MaxLength="20" />
+    <Property Name="BirimFiyati" Type="money" />
+    <Property Name="HedefStokDuzeyi" Type="smallint" />
+    <Property Name="YeniSatis" Type="smallint" />
+    <Property Name="EnAzYenidenSatisMikatari" Type="smallint" />
+    <Property Name="Sonlandi" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.1997 Yili Urun Satislari' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="1997 Yili Urun Satislari">
+    <Key>
+      <PropertyRef Name="KategoriAdi" />
+      <PropertyRef Name="UrunAdi" />
+    </Key>
+    <Property Name="KategoriAdi" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Urunlerales" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Alfabetik Sirali Urunler Listesi' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Alfabetik Sirali Urunler Listesi">
+    <Key>
+      <PropertyRef Name="UrunID" />
+      <PropertyRef Name="UrunAdi" />
+      <PropertyRef Name="Sonlandi" />
+      <PropertyRef Name="KategoriAdi" />
+    </Key>
+    <Property Name="UrunID" Type="int" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="TedarikciID" Type="int" />
+    <Property Name="KategoriID" Type="int" />
+    <Property Name="BirimdekiMiktar" Type="nvarchar" MaxLength="20" />
+    <Property Name="BirimFiyati" Type="money" />
+    <Property Name="HedefStokDuzeyi" Type="smallint" />
+    <Property Name="YeniSatis" Type="smallint" />
+    <Property Name="EnAzYenidenSatisMikatari" Type="smallint" />
+    <Property Name="Sonlandi" Type="bit" Nullable="false" />
+    <Property Name="KategoriAdi" Type="nvarchar" MaxLength="15" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Ayrintili Satis Detaylari' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Ayrintili Satis Detaylari">
+    <Key>
+      <PropertyRef Name="SatisID" />
+      <PropertyRef Name="UrunID" />
+      <PropertyRef Name="UrunAdi" />
+      <PropertyRef Name="BirimFiyati" />
+      <PropertyRef Name="Miktar" />
+      <PropertyRef Name="İndirim" />
+    </Key>
+    <Property Name="SatisID" Type="int" Nullable="false" />
+    <Property Name="UrunID" Type="int" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="BirimFiyati" Type="money" Nullable="false" />
+    <Property Name="Miktar" Type="smallint" Nullable="false" />
+    <Property Name="İndirim" Type="real" Nullable="false" />
+    <Property Name="ExtendedPrice" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Biten Urunler Listesi' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Biten Urunler Listesi">
+    <Key>
+      <PropertyRef Name="UrunID" />
+      <PropertyRef Name="UrunAdi" />
+    </Key>
+    <Property Name="UrunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar" MaxLength="40" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Faturalar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Faturalar">
+    <Key>
+      <PropertyRef Name="MusteriName" />
+      <PropertyRef Name="PersonelSatislari" />
+      <PropertyRef Name="SatisID" />
+      <PropertyRef Name="NakliyeciName" />
+      <PropertyRef Name="UrunID" />
+      <PropertyRef Name="UrunAdi" />
+      <PropertyRef Name="BirimFiyati" />
+      <PropertyRef Name="Miktar" />
+      <PropertyRef Name="İndirim" />
+    </Key>
+    <Property Name="SevkAdi" Type="nvarchar" MaxLength="40" />
+    <Property Name="SevkAdresi" Type="nvarchar" MaxLength="60" />
+    <Property Name="SevkSehri" Type="nvarchar" MaxLength="15" />
+    <Property Name="SevkBolgesi" Type="nvarchar" MaxLength="15" />
+    <Property Name="SevkPostaKodu" Type="nvarchar" MaxLength="10" />
+    <Property Name="SevkUlkesi" Type="nvarchar" MaxLength="15" />
+    <Property Name="MusteriID" Type="nchar" MaxLength="5" />
+    <Property Name="MusteriName" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Adres" Type="nvarchar" MaxLength="60" />
+    <Property Name="Sehir" Type="nvarchar" MaxLength="15" />
+    <Property Name="Bolge" Type="nvarchar" MaxLength="15" />
+    <Property Name="PostaKodu" Type="nvarchar" MaxLength="10" />
+    <Property Name="Ulke" Type="nvarchar" MaxLength="15" />
+    <Property Name="PersonelSatislari" Type="nvarchar" MaxLength="31" Nullable="false" />
+    <Property Name="SatisID" Type="int" Nullable="false" />
+    <Property Name="SatisTarihi" Type="datetime" />
+    <Property Name="OdemeTarihi" Type="datetime" />
+    <Property Name="SevkTarihi" Type="datetime" />
+    <Property Name="NakliyeciName" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="UrunID" Type="int" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="BirimFiyati" Type="money" Nullable="false" />
+    <Property Name="Miktar" Type="smallint" Nullable="false" />
+    <Property Name="İndirim" Type="real" Nullable="false" />
+    <Property Name="ExtendedPrice" Type="money" />
+    <Property Name="NakliyeUcreti" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Northwind.dbo.Her Uc Aylik Satislar' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="Her Uc Aylik Satislar">
+          <Property Name="MusteriID" Type="nchar" MaxLength="5" />
+          <Property Name="SirketAdi" Type="nvarchar" MaxLength="40" />
+          <Property Name="Sehir" Type="nvarchar" MaxLength="15" />
+          <Property Name="Ulke" Type="nvarchar" MaxLength="15" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Kategorilere Gore 1997 Yili Satislari' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Kategorilere Gore 1997 Yili Satislari">
+    <Key>
+      <PropertyRef Name="KategoriAdi" />
+    </Key>
+    <Property Name="KategoriAdi" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="KategoriSales" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Kategorilere Gore Satislar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Kategorilere Gore Satislar">
+    <Key>
+      <PropertyRef Name="KategoriID" />
+      <PropertyRef Name="KategoriAdi" />
+      <PropertyRef Name="UrunAdi" />
+    </Key>
+    <Property Name="KategoriID" Type="int" Nullable="false" />
+    <Property Name="KategoriAdi" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Urunlerales" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Kategorilere Gore Urunler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Kategorilere Gore Urunler">
+    <Key>
+      <PropertyRef Name="KategoriAdi" />
+      <PropertyRef Name="UrunAdi" />
+      <PropertyRef Name="Sonlandi" />
+    </Key>
+    <Property Name="KategoriAdi" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="BirimdekiMiktar" Type="nvarchar" MaxLength="20" />
+    <Property Name="HedefStokDuzeyi" Type="smallint" />
+    <Property Name="Sonlandi" Type="bit" Nullable="false" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Ortalama Maliyetin Uzerindeki Urunler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Ortalama Maliyetin Uzerindeki Urunler">
+    <Key>
+      <PropertyRef Name="UrunAdi" />
+    </Key>
+    <Property Name="UrunAdi" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="BirimFiyati" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Ozet Ceyrek Satislar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Ozet Ceyrek Satislar">
+    <Key>
+      <PropertyRef Name="SatisID" />
+    </Key>
+    <Property Name="SevkTarihi" Type="datetime" />
+    <Property Name="SatisID" Type="int" Nullable="false" />
+    <Property Name="Subtotal" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Ozet Yillik Satislar' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Ozet Yillik Satislar">
+    <Key>
+      <PropertyRef Name="SatisID" />
+    </Key>
+    <Property Name="SevkTarihi" Type="datetime" />
+    <Property Name="SatisID" Type="int" Nullable="false" />
+    <Property Name="Subtotal" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Satis Alt Toplamlari' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Satis Alt Toplamlari">
+    <Key>
+      <PropertyRef Name="SatisID" />
+    </Key>
+    <Property Name="SatisID" Type="int" Nullable="false" />
+    <Property Name="Subtotal" Type="money" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Satislar Sorgusu' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Satislar Sorgusu">
+    <Key>
+      <PropertyRef Name="SatisID" />
+      <PropertyRef Name="SirketAdi" />
+    </Key>
+    <Property Name="SatisID" Type="int" Nullable="false" />
+    <Property Name="MusteriID" Type="nchar" MaxLength="5" />
+    <Property Name="PersonelID" Type="int" />
+    <Property Name="SatisTarihi" Type="datetime" />
+    <Property Name="OdemeTarihi" Type="datetime" />
+    <Property Name="SevkTarihi" Type="datetime" />
+    <Property Name="ShipVia" Type="int" />
+    <Property Name="NakliyeUcreti" Type="money" />
+    <Property Name="SevkAdi" Type="nvarchar" MaxLength="40" />
+    <Property Name="SevkAdresi" Type="nvarchar" MaxLength="60" />
+    <Property Name="SevkSehri" Type="nvarchar" MaxLength="15" />
+    <Property Name="SevkBolgesi" Type="nvarchar" MaxLength="15" />
+    <Property Name="SevkPostaKodu" Type="nvarchar" MaxLength="10" />
+    <Property Name="SevkUlkesi" Type="nvarchar" MaxLength="15" />
+    <Property Name="SirketAdi" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="Adres" Type="nvarchar" MaxLength="60" />
+    <Property Name="Sehir" Type="nvarchar" MaxLength="15" />
+    <Property Name="Bolge" Type="nvarchar" MaxLength="15" />
+    <Property Name="PostaKodu" Type="nvarchar" MaxLength="10" />
+    <Property Name="Ulke" Type="nvarchar" MaxLength="15" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Satislarin Toplam Miktari' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Satislarin Toplam Miktari">
+    <Key>
+      <PropertyRef Name="SatisID" />
+      <PropertyRef Name="SirketAdi" />
+    </Key>
+    <Property Name="SaleAmount" Type="money" />
+    <Property Name="SatisID" Type="int" Nullable="false" />
+    <Property Name="SirketAdi" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="SevkTarihi" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'Northwind.dbo.Sehirlere Gore Musteri ve Tedarikciler' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="Sehirlere Gore Musteri ve Tedarikciler">
+    <Key>
+      <PropertyRef Name="SirketAdi" />
+      <PropertyRef Name="Relationship" />
+    </Key>
+    <Property Name="Sehir" Type="nvarchar" MaxLength="15" />
+    <Property Name="SirketAdi" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="MusteriAdi" Type="nvarchar" MaxLength="30" />
+    <Property Name="Relationship" Type="varchar" MaxLength="12" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Bolgeler_Bolge">
+    <End Role="Bolge" Type="Self.Bolge" Multiplicity="1" />
+    <End Role="Bolgeler" Type="Self.Bolgeler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bolge">
+        <PropertyRef Name="BolgeID" />
+      </Principal>
+      <Dependent Role="Bolgeler">
+        <PropertyRef Name="BolgeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MusteriMusteriDemo">
+    <End Role="MusteriDemographics" Type="Self.MusteriDemographics" Multiplicity="1" />
+    <End Role="MusteriMusteriDemo" Type="Self.MusteriMusteriDemo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MusteriDemographics">
+        <PropertyRef Name="MusteriTypeID" />
+      </Principal>
+      <Dependent Role="MusteriMusteriDemo">
+        <PropertyRef Name="MusteriTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_MusteriMusteriDemo_Musteriler">
+    <End Role="Musteriler" Type="Self.Musteriler" Multiplicity="1" />
+    <End Role="MusteriMusteriDemo" Type="Self.MusteriMusteriDemo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteriler">
+        <PropertyRef Name="MusteriID" />
+      </Principal>
+      <Dependent Role="MusteriMusteriDemo">
+        <PropertyRef Name="MusteriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Details_Satislar">
+    <End Role="Satislar" Type="Self.Satislar" Multiplicity="1" />
+    <End Role="Satis Detaylari" Type="Self.Satis Detaylari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Satislar">
+        <PropertyRef Name="SatisID" />
+      </Principal>
+      <Dependent Role="Satis Detaylari">
+        <PropertyRef Name="SatisID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Order_Details_Urunler">
+    <End Role="Urunler" Type="Self.Urunler" Multiplicity="1" />
+    <End Role="Satis Detaylari" Type="Self.Satis Detaylari" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urunler">
+        <PropertyRef Name="UrunID" />
+      </Principal>
+      <Dependent Role="Satis Detaylari">
+        <PropertyRef Name="UrunID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonelBolgeler_Bolgeler">
+    <End Role="Bolgeler" Type="Self.Bolgeler" Multiplicity="1" />
+    <End Role="PersonelBolgeler" Type="Self.PersonelBolgeler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Bolgeler">
+        <PropertyRef Name="TerritoryID" />
+      </Principal>
+      <Dependent Role="PersonelBolgeler">
+        <PropertyRef Name="TerritoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PersonelBolgeler_Personeller">
+    <End Role="Personeller" Type="Self.Personeller" Multiplicity="1" />
+    <End Role="PersonelBolgeler" Type="Self.PersonelBolgeler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personeller">
+        <PropertyRef Name="PersonelID" />
+      </Principal>
+      <Dependent Role="PersonelBolgeler">
+        <PropertyRef Name="PersonelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personeller_Personeller">
+    <End Role="Personeller" Type="Self.Personeller" Multiplicity="0..1" />
+    <End Role="Personeller1" Type="Self.Personeller" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personeller">
+        <PropertyRef Name="PersonelID" />
+      </Principal>
+      <Dependent Role="Personeller1">
+        <PropertyRef Name="BagliCalistigiKisi" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Satislar_Musteriler">
+    <End Role="Musteriler" Type="Self.Musteriler" Multiplicity="0..1" />
+    <End Role="Satislar" Type="Self.Satislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteriler">
+        <PropertyRef Name="MusteriID" />
+      </Principal>
+      <Dependent Role="Satislar">
+        <PropertyRef Name="MusteriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Satislar_Nakliyeciler">
+    <End Role="Nakliyeciler" Type="Self.Nakliyeciler" Multiplicity="0..1" />
+    <End Role="Satislar" Type="Self.Satislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Nakliyeciler">
+        <PropertyRef Name="NakliyeciID" />
+      </Principal>
+      <Dependent Role="Satislar">
+        <PropertyRef Name="ShipVia" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Satislar_Personeller">
+    <End Role="Personeller" Type="Self.Personeller" Multiplicity="0..1" />
+    <End Role="Satislar" Type="Self.Satislar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personeller">
+        <PropertyRef Name="PersonelID" />
+      </Principal>
+      <Dependent Role="Satislar">
+        <PropertyRef Name="PersonelID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urunler_Kategoriler">
+    <End Role="Kategoriler" Type="Self.Kategoriler" Multiplicity="0..1" />
+    <End Role="Urunler" Type="Self.Urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategoriler">
+        <PropertyRef Name="KategoriID" />
+      </Principal>
+      <Dependent Role="Urunler">
+        <PropertyRef Name="KategoriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Urunler_Tedarikciler">
+    <End Role="Tedarikciler" Type="Self.Tedarikciler" Multiplicity="0..1" />
+    <End Role="Urunler" Type="Self.Urunler" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tedarikciler">
+        <PropertyRef Name="TedarikciID" />
+      </Principal>
+      <Dependent Role="Urunler">
+        <PropertyRef Name="TedarikciID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Function Name="CustOrderHist" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MusteriID" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="CustSatislarDetail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="SatisID" Type="int" Mode="In" />
+  </Function>
+  <Function Name="CustSatislarSatislar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="MusteriID" Type="nchar" Mode="In" />
+  </Function>
+  <Function Name="Fiyati_En_Yuksek_On_Urun" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="Fiyati En Yuksek On Urun" />
+  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
+  <Function Name="SalesByKategori" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="KategoriAdi" Type="nvarchar" Mode="In" />
+    <Parameter Name="OrdYear" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="version" Type="int" Mode="In" />
+    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
+  </Function>
+  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+  </Function>
+  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
+    <Parameter Name="owner_id" Type="int" Mode="In" />
+    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
+  </Function>
+  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+  <Function Name="Ulkelere_Gore_Personel_Satislari" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="Ulkelere Gore Personel Satislari">
+    <Parameter Name="Beginning_Date" Type="datetime" Mode="In" />
+    <Parameter Name="Ending_Date" Type="datetime" Mode="In" />
+  </Function>
+  <Function Name="Yillik_Satislar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" StoreFunctionName="Yillik Satislar">
+    <Parameter Name="Beginning_Date" Type="datetime" Mode="In" />
+    <Parameter Name="Ending_Date" Type="datetime" Mode="In" />
+  </Function>
+  <EntityContainer Name="NorthwindModelStoreContainer">
+    <EntitySet Name="Bolge" EntityType="Self.Bolge" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Bolgeler" EntityType="Self.Bolgeler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Kategoriler" EntityType="Self.Kategoriler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MusteriDemographics" EntityType="Self.MusteriDemographics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Musteriler" EntityType="Self.Musteriler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="MusteriMusteriDemo" EntityType="Self.MusteriMusteriDemo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Nakliyeciler" EntityType="Self.Nakliyeciler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PersonelBolgeler" EntityType="Self.PersonelBolgeler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Personeller" EntityType="Self.Personeller" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Satis Detaylari" EntityType="Self.Satis Detaylari" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Satislar" EntityType="Self.Satislar" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tedarikciler" EntityType="Self.Tedarikciler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Urunler" EntityType="Self.Urunler" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="1997 Yili Urun Satislari" EntityType="Self.1997 Yili Urun Satislari" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [1997 Yili Urun Satislari].[KategoriAdi] AS [KategoriAdi], 
+    [1997 Yili Urun Satislari].[UrunAdi] AS [UrunAdi], 
+    [1997 Yili Urun Satislari].[Urunlerales] AS [Urunlerales]
+    FROM [dbo].[1997 Yili Urun Satislari] AS [1997 Yili Urun Satislari]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Alfabetik Sirali Urunler Listesi" EntityType="Self.Alfabetik Sirali Urunler Listesi" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Alfabetik Sirali Urunler Listesi].[UrunID] AS [UrunID], 
+    [Alfabetik Sirali Urunler Listesi].[UrunAdi] AS [UrunAdi], 
+    [Alfabetik Sirali Urunler Listesi].[TedarikciID] AS [TedarikciID], 
+    [Alfabetik Sirali Urunler Listesi].[KategoriID] AS [KategoriID], 
+    [Alfabetik Sirali Urunler Listesi].[BirimdekiMiktar] AS [BirimdekiMiktar], 
+    [Alfabetik Sirali Urunler Listesi].[BirimFiyati] AS [BirimFiyati], 
+    [Alfabetik Sirali Urunler Listesi].[HedefStokDuzeyi] AS [HedefStokDuzeyi], 
+    [Alfabetik Sirali Urunler Listesi].[YeniSatis] AS [YeniSatis], 
+    [Alfabetik Sirali Urunler Listesi].[EnAzYenidenSatisMikatari] AS [EnAzYenidenSatisMikatari], 
+    [Alfabetik Sirali Urunler Listesi].[Sonlandi] AS [Sonlandi], 
+    [Alfabetik Sirali Urunler Listesi].[KategoriAdi] AS [KategoriAdi]
+    FROM [dbo].[Alfabetik Sirali Urunler Listesi] AS [Alfabetik Sirali Urunler Listesi]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Ayrintili Satis Detaylari" EntityType="Self.Ayrintili Satis Detaylari" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Ayrintili Satis Detaylari].[SatisID] AS [SatisID], 
+    [Ayrintili Satis Detaylari].[UrunID] AS [UrunID], 
+    [Ayrintili Satis Detaylari].[UrunAdi] AS [UrunAdi], 
+    [Ayrintili Satis Detaylari].[BirimFiyati] AS [BirimFiyati], 
+    [Ayrintili Satis Detaylari].[Miktar] AS [Miktar], 
+    [Ayrintili Satis Detaylari].[İndirim] AS [İndirim], 
+    [Ayrintili Satis Detaylari].[ExtendedPrice] AS [ExtendedPrice]
+    FROM [dbo].[Ayrintili Satis Detaylari] AS [Ayrintili Satis Detaylari]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Biten Urunler Listesi" EntityType="Self.Biten Urunler Listesi" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Biten Urunler Listesi].[UrunID] AS [UrunID], 
+    [Biten Urunler Listesi].[UrunAdi] AS [UrunAdi]
+    FROM [dbo].[Biten Urunler Listesi] AS [Biten Urunler Listesi]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Faturalar" EntityType="Self.Faturalar" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Faturalar].[SevkAdi] AS [SevkAdi], 
+    [Faturalar].[SevkAdresi] AS [SevkAdresi], 
+    [Faturalar].[SevkSehri] AS [SevkSehri], 
+    [Faturalar].[SevkBolgesi] AS [SevkBolgesi], 
+    [Faturalar].[SevkPostaKodu] AS [SevkPostaKodu], 
+    [Faturalar].[SevkUlkesi] AS [SevkUlkesi], 
+    [Faturalar].[MusteriID] AS [MusteriID], 
+    [Faturalar].[MusteriName] AS [MusteriName], 
+    [Faturalar].[Adres] AS [Adres], 
+    [Faturalar].[Sehir] AS [Sehir], 
+    [Faturalar].[Bolge] AS [Bolge], 
+    [Faturalar].[PostaKodu] AS [PostaKodu], 
+    [Faturalar].[Ulke] AS [Ulke], 
+    [Faturalar].[PersonelSatislari] AS [PersonelSatislari], 
+    [Faturalar].[SatisID] AS [SatisID], 
+    [Faturalar].[SatisTarihi] AS [SatisTarihi], 
+    [Faturalar].[OdemeTarihi] AS [OdemeTarihi], 
+    [Faturalar].[SevkTarihi] AS [SevkTarihi], 
+    [Faturalar].[NakliyeciName] AS [NakliyeciName], 
+    [Faturalar].[UrunID] AS [UrunID], 
+    [Faturalar].[UrunAdi] AS [UrunAdi], 
+    [Faturalar].[BirimFiyati] AS [BirimFiyati], 
+    [Faturalar].[Miktar] AS [Miktar], 
+    [Faturalar].[İndirim] AS [İndirim], 
+    [Faturalar].[ExtendedPrice] AS [ExtendedPrice], 
+    [Faturalar].[NakliyeUcreti] AS [NakliyeUcreti]
+    FROM [dbo].[Faturalar] AS [Faturalar]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Kategorilere Gore 1997 Yili Satislari" EntityType="Self.Kategorilere Gore 1997 Yili Satislari" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Kategorilere Gore 1997 Yili Satislari].[KategoriAdi] AS [KategoriAdi], 
+    [Kategorilere Gore 1997 Yili Satislari].[KategoriSales] AS [KategoriSales]
+    FROM [dbo].[Kategorilere Gore 1997 Yili Satislari] AS [Kategorilere Gore 1997 Yili Satislari]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Kategorilere Gore Satislar" EntityType="Self.Kategorilere Gore Satislar" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Kategorilere Gore Satislar].[KategoriID] AS [KategoriID], 
+    [Kategorilere Gore Satislar].[KategoriAdi] AS [KategoriAdi], 
+    [Kategorilere Gore Satislar].[UrunAdi] AS [UrunAdi], 
+    [Kategorilere Gore Satislar].[Urunlerales] AS [Urunlerales]
+    FROM [dbo].[Kategorilere Gore Satislar] AS [Kategorilere Gore Satislar]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Kategorilere Gore Urunler" EntityType="Self.Kategorilere Gore Urunler" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Kategorilere Gore Urunler].[KategoriAdi] AS [KategoriAdi], 
+    [Kategorilere Gore Urunler].[UrunAdi] AS [UrunAdi], 
+    [Kategorilere Gore Urunler].[BirimdekiMiktar] AS [BirimdekiMiktar], 
+    [Kategorilere Gore Urunler].[HedefStokDuzeyi] AS [HedefStokDuzeyi], 
+    [Kategorilere Gore Urunler].[Sonlandi] AS [Sonlandi]
+    FROM [dbo].[Kategorilere Gore Urunler] AS [Kategorilere Gore Urunler]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Ortalama Maliyetin Uzerindeki Urunler" EntityType="Self.Ortalama Maliyetin Uzerindeki Urunler" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Ortalama Maliyetin Uzerindeki Urunler].[UrunAdi] AS [UrunAdi], 
+    [Ortalama Maliyetin Uzerindeki Urunler].[BirimFiyati] AS [BirimFiyati]
+    FROM [dbo].[Ortalama Maliyetin Uzerindeki Urunler] AS [Ortalama Maliyetin Uzerindeki Urunler]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Ozet Ceyrek Satislar" EntityType="Self.Ozet Ceyrek Satislar" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Ozet Ceyrek Satislar].[SevkTarihi] AS [SevkTarihi], 
+    [Ozet Ceyrek Satislar].[SatisID] AS [SatisID], 
+    [Ozet Ceyrek Satislar].[Subtotal] AS [Subtotal]
+    FROM [dbo].[Ozet Ceyrek Satislar] AS [Ozet Ceyrek Satislar]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Ozet Yillik Satislar" EntityType="Self.Ozet Yillik Satislar" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Ozet Yillik Satislar].[SevkTarihi] AS [SevkTarihi], 
+    [Ozet Yillik Satislar].[SatisID] AS [SatisID], 
+    [Ozet Yillik Satislar].[Subtotal] AS [Subtotal]
+    FROM [dbo].[Ozet Yillik Satislar] AS [Ozet Yillik Satislar]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Satis Alt Toplamlari" EntityType="Self.Satis Alt Toplamlari" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Satis Alt Toplamlari].[SatisID] AS [SatisID], 
+    [Satis Alt Toplamlari].[Subtotal] AS [Subtotal]
+    FROM [dbo].[Satis Alt Toplamlari] AS [Satis Alt Toplamlari]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Satislar Sorgusu" EntityType="Self.Satislar Sorgusu" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Satislar Sorgusu].[SatisID] AS [SatisID], 
+    [Satislar Sorgusu].[MusteriID] AS [MusteriID], 
+    [Satislar Sorgusu].[PersonelID] AS [PersonelID], 
+    [Satislar Sorgusu].[SatisTarihi] AS [SatisTarihi], 
+    [Satislar Sorgusu].[OdemeTarihi] AS [OdemeTarihi], 
+    [Satislar Sorgusu].[SevkTarihi] AS [SevkTarihi], 
+    [Satislar Sorgusu].[ShipVia] AS [ShipVia], 
+    [Satislar Sorgusu].[NakliyeUcreti] AS [NakliyeUcreti], 
+    [Satislar Sorgusu].[SevkAdi] AS [SevkAdi], 
+    [Satislar Sorgusu].[SevkAdresi] AS [SevkAdresi], 
+    [Satislar Sorgusu].[SevkSehri] AS [SevkSehri], 
+    [Satislar Sorgusu].[SevkBolgesi] AS [SevkBolgesi], 
+    [Satislar Sorgusu].[SevkPostaKodu] AS [SevkPostaKodu], 
+    [Satislar Sorgusu].[SevkUlkesi] AS [SevkUlkesi], 
+    [Satislar Sorgusu].[SirketAdi] AS [SirketAdi], 
+    [Satislar Sorgusu].[Adres] AS [Adres], 
+    [Satislar Sorgusu].[Sehir] AS [Sehir], 
+    [Satislar Sorgusu].[Bolge] AS [Bolge], 
+    [Satislar Sorgusu].[PostaKodu] AS [PostaKodu], 
+    [Satislar Sorgusu].[Ulke] AS [Ulke]
+    FROM [dbo].[Satislar Sorgusu] AS [Satislar Sorgusu]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Satislarin Toplam Miktari" EntityType="Self.Satislarin Toplam Miktari" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Satislarin Toplam Miktari].[SaleAmount] AS [SaleAmount], 
+    [Satislarin Toplam Miktari].[SatisID] AS [SatisID], 
+    [Satislarin Toplam Miktari].[SirketAdi] AS [SirketAdi], 
+    [Satislarin Toplam Miktari].[SevkTarihi] AS [SevkTarihi]
+    FROM [dbo].[Satislarin Toplam Miktari] AS [Satislarin Toplam Miktari]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="Sehirlere Gore Musteri ve Tedarikciler" EntityType="Self.Sehirlere Gore Musteri ve Tedarikciler" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Sehirlere Gore Musteri ve Tedarikciler].[Sehir] AS [Sehir], 
+    [Sehirlere Gore Musteri ve Tedarikciler].[SirketAdi] AS [SirketAdi], 
+    [Sehirlere Gore Musteri ve Tedarikciler].[MusteriAdi] AS [MusteriAdi], 
+    [Sehirlere Gore Musteri ve Tedarikciler].[Relationship] AS [Relationship]
+    FROM [dbo].[Sehirlere Gore Musteri ve Tedarikciler] AS [Sehirlere Gore Musteri ve Tedarikciler]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_Bolgeler_Bolge" Association="Self.FK_Bolgeler_Bolge">
+      <End Role="Bolge" EntitySet="Bolge" />
+      <End Role="Bolgeler" EntitySet="Bolgeler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MusteriMusteriDemo" Association="Self.FK_MusteriMusteriDemo">
+      <End Role="MusteriDemographics" EntitySet="MusteriDemographics" />
+      <End Role="MusteriMusteriDemo" EntitySet="MusteriMusteriDemo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_MusteriMusteriDemo_Musteriler" Association="Self.FK_MusteriMusteriDemo_Musteriler">
+      <End Role="Musteriler" EntitySet="Musteriler" />
+      <End Role="MusteriMusteriDemo" EntitySet="MusteriMusteriDemo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Details_Satislar" Association="Self.FK_Order_Details_Satislar">
+      <End Role="Satislar" EntitySet="Satislar" />
+      <End Role="Satis Detaylari" EntitySet="Satis Detaylari" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_Details_Urunler" Association="Self.FK_Order_Details_Urunler">
+      <End Role="Urunler" EntitySet="Urunler" />
+      <End Role="Satis Detaylari" EntitySet="Satis Detaylari" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonelBolgeler_Bolgeler" Association="Self.FK_PersonelBolgeler_Bolgeler">
+      <End Role="Bolgeler" EntitySet="Bolgeler" />
+      <End Role="PersonelBolgeler" EntitySet="PersonelBolgeler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PersonelBolgeler_Personeller" Association="Self.FK_PersonelBolgeler_Personeller">
+      <End Role="Personeller" EntitySet="Personeller" />
+      <End Role="PersonelBolgeler" EntitySet="PersonelBolgeler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personeller_Personeller" Association="Self.FK_Personeller_Personeller">
+      <End Role="Personeller" EntitySet="Personeller" />
+      <End Role="Personeller1" EntitySet="Personeller" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Satislar_Musteriler" Association="Self.FK_Satislar_Musteriler">
+      <End Role="Musteriler" EntitySet="Musteriler" />
+      <End Role="Satislar" EntitySet="Satislar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Satislar_Nakliyeciler" Association="Self.FK_Satislar_Nakliyeciler">
+      <End Role="Nakliyeciler" EntitySet="Nakliyeciler" />
+      <End Role="Satislar" EntitySet="Satislar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Satislar_Personeller" Association="Self.FK_Satislar_Personeller">
+      <End Role="Personeller" EntitySet="Personeller" />
+      <End Role="Satislar" EntitySet="Satislar" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urunler_Kategoriler" Association="Self.FK_Urunler_Kategoriler">
+      <End Role="Kategoriler" EntitySet="Kategoriler" />
+      <End Role="Urunler" EntitySet="Urunler" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Urunler_Tedarikciler" Association="Self.FK_Urunler_Tedarikciler">
+      <End Role="Tedarikciler" EntitySet="Tedarikciler" />
+      <End Role="Urunler" EntitySet="Urunler" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

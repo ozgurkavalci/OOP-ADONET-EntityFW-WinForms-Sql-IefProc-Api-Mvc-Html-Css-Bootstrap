@@ -1,0 +1,399 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="GaleriModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Arac">
+          <Key>
+            <PropertyRef Name="AracNo" />
+          </Key>
+          <Property Name="AracNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AracFiyat" Type="money" />
+          <Property Name="AracAdet" Type="int" />
+          <Property Name="AracMarka" Type="varchar" MaxLength="50" />
+          <Property Name="AracModel" Type="varchar" MaxLength="50" />
+          <Property Name="AracYil" Type="int" />
+          <Property Name="AracOzellik" Type="varchar" MaxLength="50" />
+          <Property Name="AracMotorHacmi" Type="int" />
+          <Property Name="AracPaket" Type="varchar" MaxLength="50" />
+          <Property Name="AracRenk" Type="varchar" MaxLength="50" />
+          <Property Name="SubeNo" Type="int" />
+        </EntityType>
+        <EntityType Name="Kullanici">
+          <Key>
+            <PropertyRef Name="KullaniciID" />
+          </Key>
+          <Property Name="KullaniciID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KullaniciAdi" Type="varchar" MaxLength="50" />
+          <Property Name="Sifre" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Telefon" Type="char" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="Musteri">
+          <Key>
+            <PropertyRef Name="MusteriNo" />
+          </Key>
+          <Property Name="MusteriNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="MusteriAdSoyad" Type="varchar" MaxLength="50" />
+          <Property Name="MusteriTcNo" Type="char" MaxLength="11" />
+          <Property Name="MusteriMail" Type="varchar" MaxLength="50" />
+          <Property Name="MusteriTelefon" Type="char" MaxLength="10" />
+          <Property Name="MusteriAdres" Type="varchar" MaxLength="50" />
+          <Property Name="AracNo" Type="int" />
+        </EntityType>
+        <EntityType Name="Personel">
+          <Key>
+            <PropertyRef Name="PersonelNo" />
+          </Key>
+          <Property Name="PersonelNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PersonelAdSoyad" Type="varchar" MaxLength="50" />
+          <Property Name="PersonelYas" Type="int" />
+          <Property Name="PersonelTcNo" Type="char" MaxLength="11" />
+          <Property Name="PersonelMail" Type="varchar" MaxLength="50" />
+          <Property Name="PersonelTelefon" Type="char" MaxLength="10" />
+          <Property Name="PersonelAdres" Type="varchar" MaxLength="50" />
+          <Property Name="SubeNo" Type="int" />
+        </EntityType>
+        <EntityType Name="Sube">
+          <Key>
+            <PropertyRef Name="SubeNo" />
+          </Key>
+          <Property Name="SubeNo" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SubeAdi" Type="varchar" MaxLength="50" />
+          <Property Name="CalisanSayisi" Type="int" />
+          <Property Name="SubeCiro" Type="money" />
+          <Property Name="MusteriNo" Type="int" />
+          <Property Name="PersonelNo" Type="int" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <Association Name="FK_Arac_Sube">
+          <End Role="Sube" Type="Self.Sube" Multiplicity="0..1" />
+          <End Role="Arac" Type="Self.Arac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sube">
+              <PropertyRef Name="SubeNo" />
+            </Principal>
+            <Dependent Role="Arac">
+              <PropertyRef Name="SubeNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sube_Musteri">
+          <End Role="Musteri" Type="Self.Musteri" Multiplicity="0..1" />
+          <End Role="Sube" Type="Self.Sube" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Musteri">
+              <PropertyRef Name="MusteriNo" />
+            </Principal>
+            <Dependent Role="Sube">
+              <PropertyRef Name="MusteriNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sube_Personel">
+          <End Role="Personel" Type="Self.Personel" Multiplicity="0..1" />
+          <End Role="Sube" Type="Self.Sube" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personel">
+              <PropertyRef Name="PersonelNo" />
+            </Principal>
+            <Dependent Role="Sube">
+              <PropertyRef Name="PersonelNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GaleriModelStoreContainer">
+          <EntitySet Name="Arac" EntityType="Self.Arac" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Kullanici" EntityType="Self.Kullanici" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Musteri" EntityType="Self.Musteri" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Personel" EntityType="Self.Personel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sube" EntityType="Self.Sube" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Arac_Sube" Association="Self.FK_Arac_Sube">
+            <End Role="Sube" EntitySet="Sube" />
+            <End Role="Arac" EntitySet="Arac" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sube_Musteri" Association="Self.FK_Sube_Musteri">
+            <End Role="Musteri" EntitySet="Musteri" />
+            <End Role="Sube" EntitySet="Sube" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sube_Personel" Association="Self.FK_Sube_Personel">
+            <End Role="Personel" EntitySet="Personel" />
+            <End Role="Sube" EntitySet="Sube" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="GaleriModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Arac">
+          <Key>
+            <PropertyRef Name="AracNo" />
+          </Key>
+          <Property Name="AracNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AracFiyat" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="AracAdet" Type="Int32" />
+          <Property Name="AracMarka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AracModel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AracYil" Type="Int32" />
+          <Property Name="AracOzellik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AracMotorHacmi" Type="Int32" />
+          <Property Name="AracPaket" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AracRenk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SubeNo" Type="Int32" />
+          <NavigationProperty Name="Sube" Relationship="Self.FK_Arac_Sube" FromRole="Arac" ToRole="Sube" />
+        </EntityType>
+        <EntityType Name="Kullanici">
+          <Key>
+            <PropertyRef Name="KullaniciID" />
+          </Key>
+          <Property Name="KullaniciID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Telefon" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Musteri">
+          <Key>
+            <PropertyRef Name="MusteriNo" />
+          </Key>
+          <Property Name="MusteriNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MusteriAdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MusteriTcNo" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="MusteriMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MusteriTelefon" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="MusteriAdres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="AracNo" Type="Int32" />
+          <NavigationProperty Name="Subes" Relationship="Self.FK_Sube_Musteri" FromRole="Musteri" ToRole="Sube" />
+        </EntityType>
+        <EntityType Name="Personel">
+          <Key>
+            <PropertyRef Name="PersonelNo" />
+          </Key>
+          <Property Name="PersonelNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonelAdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PersonelYas" Type="Int32" />
+          <Property Name="PersonelTcNo" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+          <Property Name="PersonelMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PersonelTelefon" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="PersonelAdres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SubeNo" Type="Int32" />
+          <NavigationProperty Name="Sube" Relationship="Self.FK_Personel_Sube" FromRole="Personel" ToRole="Sube" />
+          <NavigationProperty Name="Subes" Relationship="Self.FK_Sube_Personel" FromRole="Personel" ToRole="Sube" />
+        </EntityType>
+        <EntityType Name="Sube">
+          <Key>
+            <PropertyRef Name="SubeNo" />
+          </Key>
+          <Property Name="SubeNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubeAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CalisanSayisi" Type="Int32" />
+          <Property Name="SubeCiro" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="MusteriNo" Type="Int32" />
+          <Property Name="PersonelNo" Type="Int32" />
+          <NavigationProperty Name="Aracs" Relationship="Self.FK_Arac_Sube" FromRole="Sube" ToRole="Arac" />
+          <NavigationProperty Name="Musteri" Relationship="Self.FK_Sube_Musteri" FromRole="Sube" ToRole="Musteri" />
+          <NavigationProperty Name="Personels" Relationship="Self.FK_Personel_Sube" FromRole="Sube" ToRole="Personel" />
+          <NavigationProperty Name="Personel" Relationship="Self.FK_Sube_Personel" FromRole="Sube" ToRole="Personel" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <Association Name="FK_Arac_Sube">
+          <End Role="Sube" Type="Self.Sube" Multiplicity="0..1" />
+          <End Role="Arac" Type="Self.Arac" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sube">
+              <PropertyRef Name="SubeNo" />
+            </Principal>
+            <Dependent Role="Arac">
+              <PropertyRef Name="SubeNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sube_Musteri">
+          <End Role="Musteri" Type="Self.Musteri" Multiplicity="0..1" />
+          <End Role="Sube" Type="Self.Sube" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Musteri">
+              <PropertyRef Name="MusteriNo" />
+            </Principal>
+            <Dependent Role="Sube">
+              <PropertyRef Name="MusteriNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Personel_Sube">
+          <End Role="Sube" Type="Self.Sube" Multiplicity="0..1" />
+          <End Role="Personel" Type="Self.Personel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sube">
+              <PropertyRef Name="SubeNo" />
+            </Principal>
+            <Dependent Role="Personel">
+              <PropertyRef Name="SubeNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Sube_Personel">
+          <End Role="Personel" Type="Self.Personel" Multiplicity="0..1" />
+          <End Role="Sube" Type="Self.Sube" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Personel">
+              <PropertyRef Name="PersonelNo" />
+            </Principal>
+            <Dependent Role="Sube">
+              <PropertyRef Name="PersonelNo" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="GaleriEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Aracs" EntityType="Self.Arac" />
+          <EntitySet Name="Kullanicis" EntityType="Self.Kullanici" />
+          <EntitySet Name="Musteris" EntityType="Self.Musteri" />
+          <EntitySet Name="Personels" EntityType="Self.Personel" />
+          <EntitySet Name="Subes" EntityType="Self.Sube" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <AssociationSet Name="FK_Arac_Sube" Association="Self.FK_Arac_Sube">
+            <End Role="Sube" EntitySet="Subes" />
+            <End Role="Arac" EntitySet="Aracs" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sube_Musteri" Association="Self.FK_Sube_Musteri">
+            <End Role="Musteri" EntitySet="Musteris" />
+            <End Role="Sube" EntitySet="Subes" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Personel_Sube" Association="Self.FK_Personel_Sube">
+            <End Role="Sube" EntitySet="Subes" />
+            <End Role="Personel" EntitySet="Personels" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Sube_Personel" Association="Self.FK_Sube_Personel">
+            <End Role="Personel" EntitySet="Personels" />
+            <End Role="Sube" EntitySet="Subes" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="GaleriModelStoreContainer" CdmEntityContainer="GaleriEntities">
+          <EntitySetMapping Name="Aracs">
+            <EntityTypeMapping TypeName="GaleriModel.Arac">
+              <MappingFragment StoreEntitySet="Arac">
+                <ScalarProperty Name="AracNo" ColumnName="AracNo" />
+                <ScalarProperty Name="AracFiyat" ColumnName="AracFiyat" />
+                <ScalarProperty Name="AracAdet" ColumnName="AracAdet" />
+                <ScalarProperty Name="AracMarka" ColumnName="AracMarka" />
+                <ScalarProperty Name="AracModel" ColumnName="AracModel" />
+                <ScalarProperty Name="AracYil" ColumnName="AracYil" />
+                <ScalarProperty Name="AracOzellik" ColumnName="AracOzellik" />
+                <ScalarProperty Name="AracMotorHacmi" ColumnName="AracMotorHacmi" />
+                <ScalarProperty Name="AracPaket" ColumnName="AracPaket" />
+                <ScalarProperty Name="AracRenk" ColumnName="AracRenk" />
+                <ScalarProperty Name="SubeNo" ColumnName="SubeNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Kullanicis">
+            <EntityTypeMapping TypeName="GaleriModel.Kullanici">
+              <MappingFragment StoreEntitySet="Kullanici">
+                <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+                <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+                <ScalarProperty Name="Sifre" ColumnName="Sifre" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Musteris">
+            <EntityTypeMapping TypeName="GaleriModel.Musteri">
+              <MappingFragment StoreEntitySet="Musteri">
+                <ScalarProperty Name="MusteriNo" ColumnName="MusteriNo" />
+                <ScalarProperty Name="MusteriAdSoyad" ColumnName="MusteriAdSoyad" />
+                <ScalarProperty Name="MusteriTcNo" ColumnName="MusteriTcNo" />
+                <ScalarProperty Name="MusteriMail" ColumnName="MusteriMail" />
+                <ScalarProperty Name="MusteriTelefon" ColumnName="MusteriTelefon" />
+                <ScalarProperty Name="MusteriAdres" ColumnName="MusteriAdres" />
+                <ScalarProperty Name="AracNo" ColumnName="AracNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Personels">
+            <EntityTypeMapping TypeName="GaleriModel.Personel">
+              <MappingFragment StoreEntitySet="Personel">
+                <ScalarProperty Name="PersonelNo" ColumnName="PersonelNo" />
+                <ScalarProperty Name="PersonelAdSoyad" ColumnName="PersonelAdSoyad" />
+                <ScalarProperty Name="PersonelYas" ColumnName="PersonelYas" />
+                <ScalarProperty Name="PersonelTcNo" ColumnName="PersonelTcNo" />
+                <ScalarProperty Name="PersonelMail" ColumnName="PersonelMail" />
+                <ScalarProperty Name="PersonelTelefon" ColumnName="PersonelTelefon" />
+                <ScalarProperty Name="PersonelAdres" ColumnName="PersonelAdres" />
+                <ScalarProperty Name="SubeNo" ColumnName="SubeNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Subes">
+            <EntityTypeMapping TypeName="GaleriModel.Sube">
+              <MappingFragment StoreEntitySet="Sube">
+                <ScalarProperty Name="SubeNo" ColumnName="SubeNo" />
+                <ScalarProperty Name="SubeAdi" ColumnName="SubeAdi" />
+                <ScalarProperty Name="CalisanSayisi" ColumnName="CalisanSayisi" />
+                <ScalarProperty Name="SubeCiro" ColumnName="SubeCiro" />
+                <ScalarProperty Name="MusteriNo" ColumnName="MusteriNo" />
+                <ScalarProperty Name="PersonelNo" ColumnName="PersonelNo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="GaleriModel.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

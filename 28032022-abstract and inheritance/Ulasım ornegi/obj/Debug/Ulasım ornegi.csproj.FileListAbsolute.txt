@@ -1,0 +1,16 @@
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\Ulasım ornegi\obj\Debug\Ulasım ornegi.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\Ulasım ornegi\obj\Debug\Ulasım ornegi.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\Ulasım ornegi\obj\Debug\Ulasım ornegi.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\Ulasım ornegi\bin\Debug\Ulasım ornegi.exe.config
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\Ulasım ornegi\bin\Debug\Ulasım ornegi.exe
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\Ulasım ornegi\bin\Debug\Ulasım ornegi.pdb
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\Ulasım ornegi\obj\Debug\Ulasım ornegi.exe
+C:\Users\STUDENT2\Desktop\ozgur\28032022-\Ulasım ornegi\obj\Debug\Ulasım ornegi.pdb
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\Ulasım ornegi\bin\Debug\Ulasım ornegi.exe.config
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\Ulasım ornegi\bin\Debug\Ulasım ornegi.exe
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\Ulasım ornegi\bin\Debug\Ulasım ornegi.pdb
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\Ulasım ornegi\obj\Debug\Ulasım ornegi.csproj.AssemblyReference.cache
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\Ulasım ornegi\obj\Debug\Ulasım ornegi.csproj.SuggestedBindingRedirects.cache
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\Ulasım ornegi\obj\Debug\Ulasım ornegi.csproj.CoreCompileInputs.cache
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\Ulasım ornegi\obj\Debug\Ulasım ornegi.exe
+C:\Users\ozgur\OneDrive\Masaüstü\28032022-\Ulasım ornegi\obj\Debug\Ulasım ornegi.pdb

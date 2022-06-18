@@ -1,0 +1,11 @@
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\Nordwindvericek\bin\Debug\Nordwindvericek.exe.config
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\Nordwindvericek\bin\Debug\Nordwindvericek.exe
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\Nordwindvericek\bin\Debug\Nordwindvericek.pdb
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\Nordwindvericek\obj\Debug\Nordwindvericek.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\Nordwindvericek\obj\Debug\Nordwindvericek.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\Nordwindvericek\obj\Debug\Nordwindvericek.Form1.resources
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\Nordwindvericek\obj\Debug\Nordwindvericek.Properties.Resources.resources
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\Nordwindvericek\obj\Debug\Nordwindvericek.csproj.GenerateResource.cache
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\Nordwindvericek\obj\Debug\Nordwindvericek.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\Nordwindvericek\obj\Debug\Nordwindvericek.exe
+C:\Users\STUDENT2\Desktop\5052022-xmlislem\Nordwindvericek\obj\Debug\Nordwindvericek.pdb

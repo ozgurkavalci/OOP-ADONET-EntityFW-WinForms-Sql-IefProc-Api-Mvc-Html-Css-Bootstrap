@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="GaleriModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Arac">
+    <Key>
+      <PropertyRef Name="AracNo" />
+    </Key>
+    <Property Name="AracNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AracFiyat" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="AracAdet" Type="Int32" />
+    <Property Name="AracMarka" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AracModel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AracYil" Type="Int32" />
+    <Property Name="AracOzellik" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AracMotorHacmi" Type="Int32" />
+    <Property Name="AracPaket" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AracRenk" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SubeNo" Type="Int32" />
+    <NavigationProperty Name="Sube" Relationship="Self.FK_Arac_Sube" FromRole="Arac" ToRole="Sube" />
+  </EntityType>
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="KullaniciID" />
+    </Key>
+    <Property Name="KullaniciID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KullaniciAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sifre" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Telefon" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Musteri">
+    <Key>
+      <PropertyRef Name="MusteriNo" />
+    </Key>
+    <Property Name="MusteriNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MusteriAdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MusteriTcNo" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="MusteriMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MusteriTelefon" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="MusteriAdres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AracNo" Type="Int32" />
+    <NavigationProperty Name="Subes" Relationship="Self.FK_Sube_Musteri" FromRole="Musteri" ToRole="Sube" />
+  </EntityType>
+  <EntityType Name="Personel">
+    <Key>
+      <PropertyRef Name="PersonelNo" />
+    </Key>
+    <Property Name="PersonelNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PersonelAdSoyad" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PersonelYas" Type="Int32" />
+    <Property Name="PersonelTcNo" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="PersonelMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="PersonelTelefon" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="PersonelAdres" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="SubeNo" Type="Int32" />
+    <NavigationProperty Name="Sube" Relationship="Self.FK_Personel_Sube" FromRole="Personel" ToRole="Sube" />
+    <NavigationProperty Name="Subes" Relationship="Self.FK_Sube_Personel" FromRole="Personel" ToRole="Sube" />
+  </EntityType>
+  <EntityType Name="Sube">
+    <Key>
+      <PropertyRef Name="SubeNo" />
+    </Key>
+    <Property Name="SubeNo" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SubeAdi" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CalisanSayisi" Type="Int32" />
+    <Property Name="SubeCiro" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="MusteriNo" Type="Int32" />
+    <Property Name="PersonelNo" Type="Int32" />
+    <NavigationProperty Name="Aracs" Relationship="Self.FK_Arac_Sube" FromRole="Sube" ToRole="Arac" />
+    <NavigationProperty Name="Musteri" Relationship="Self.FK_Sube_Musteri" FromRole="Sube" ToRole="Musteri" />
+    <NavigationProperty Name="Personels" Relationship="Self.FK_Personel_Sube" FromRole="Sube" ToRole="Personel" />
+    <NavigationProperty Name="Personel" Relationship="Self.FK_Sube_Personel" FromRole="Sube" ToRole="Personel" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_Arac_Sube">
+    <End Role="Sube" Type="Self.Sube" Multiplicity="0..1" />
+    <End Role="Arac" Type="Self.Arac" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sube">
+        <PropertyRef Name="SubeNo" />
+      </Principal>
+      <Dependent Role="Arac">
+        <PropertyRef Name="SubeNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sube_Musteri">
+    <End Role="Musteri" Type="Self.Musteri" Multiplicity="0..1" />
+    <End Role="Sube" Type="Self.Sube" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteri">
+        <PropertyRef Name="MusteriNo" />
+      </Principal>
+      <Dependent Role="Sube">
+        <PropertyRef Name="MusteriNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Personel_Sube">
+    <End Role="Sube" Type="Self.Sube" Multiplicity="0..1" />
+    <End Role="Personel" Type="Self.Personel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sube">
+        <PropertyRef Name="SubeNo" />
+      </Principal>
+      <Dependent Role="Personel">
+        <PropertyRef Name="SubeNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Sube_Personel">
+    <End Role="Personel" Type="Self.Personel" Multiplicity="0..1" />
+    <End Role="Sube" Type="Self.Sube" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Personel">
+        <PropertyRef Name="PersonelNo" />
+      </Principal>
+      <Dependent Role="Sube">
+        <PropertyRef Name="PersonelNo" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="GaleriEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Aracs" EntityType="Self.Arac" />
+    <EntitySet Name="Kullanicis" EntityType="Self.Kullanici" />
+    <EntitySet Name="Musteris" EntityType="Self.Musteri" />
+    <EntitySet Name="Personels" EntityType="Self.Personel" />
+    <EntitySet Name="Subes" EntityType="Self.Sube" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK_Arac_Sube" Association="Self.FK_Arac_Sube">
+      <End Role="Sube" EntitySet="Subes" />
+      <End Role="Arac" EntitySet="Aracs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sube_Musteri" Association="Self.FK_Sube_Musteri">
+      <End Role="Musteri" EntitySet="Musteris" />
+      <End Role="Sube" EntitySet="Subes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Personel_Sube" Association="Self.FK_Personel_Sube">
+      <End Role="Sube" EntitySet="Subes" />
+      <End Role="Personel" EntitySet="Personels" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Sube_Personel" Association="Self.FK_Sube_Personel">
+      <End Role="Personel" EntitySet="Personels" />
+      <End Role="Sube" EntitySet="Subes" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

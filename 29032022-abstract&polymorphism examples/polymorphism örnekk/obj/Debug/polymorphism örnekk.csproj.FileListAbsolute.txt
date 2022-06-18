@@ -1,0 +1,8 @@
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\polymorphism örnekk\bin\Debug\polymorphism örnekk.exe.config
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\polymorphism örnekk\bin\Debug\polymorphism örnekk.exe
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\polymorphism örnekk\bin\Debug\polymorphism örnekk.pdb
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\polymorphism örnekk\obj\Debug\polymorphism örnekk.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\polymorphism örnekk\obj\Debug\polymorphism örnekk.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\polymorphism örnekk\obj\Debug\polymorphism örnekk.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\polymorphism örnekk\obj\Debug\polymorphism örnekk.exe
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\polymorphism örnekk\obj\Debug\polymorphism örnekk.pdb

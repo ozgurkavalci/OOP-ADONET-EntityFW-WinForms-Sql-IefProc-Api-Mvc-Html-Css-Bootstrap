@@ -1,0 +1,335 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="BookStore.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="BookStoreStoreContainer">
+    <EntitySet Name="Musteri" EntityType="BookStore.Store.Musteri" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Urun" EntityType="BookStore.Store.Urun" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Sube" EntityType="BookStore.Store.Sube" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Personel" EntityType="BookStore.Store.Personel" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Kullanici" EntityType="BookStore.Store.Kullanici" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="UrunSube" Association="BookStore.Store.UrunSube">
+      <End Role="Urun" EntitySet="Urun" />
+      <End Role="Sube" EntitySet="Sube" />
+    </AssociationSet>
+    <AssociationSet Name="SubePersonel" Association="BookStore.Store.SubePersonel">
+      <End Role="Sube" EntitySet="Sube" />
+      <End Role="Personel" EntitySet="Personel" />
+    </AssociationSet>
+    <AssociationSet Name="MusteriUrun" Association="BookStore.Store.MusteriUrun">
+      <End Role="Musteri" EntitySet="Musteri" />
+      <End Role="Urun" EntitySet="Urun" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Musteri">
+    <Key>
+      <PropertyRef Name="MusteriID" />
+    </Key>
+    <Property Name="MusteriID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MusteriAdSoyad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MusteriTcNO" Type="nchar" Nullable="false" MaxLength="11" />
+    <Property Name="MusteriMail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="MusteriTelefon" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="MusteriAdres" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Urun">
+    <Key>
+      <PropertyRef Name="UrunID" />
+    </Key>
+    <Property Name="UrunID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UrunTuru" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UrunKategori" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UrunAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UrunCikisYili" Type="int" Nullable="false" />
+    <Property Name="UrunYazarAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="UrunAdet" Type="int" Nullable="false" />
+    <Property Name="UrunFiyat" Type="decimal" Nullable="false" />
+    <Property Name="MusteriMusteriID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Sube">
+    <Key>
+      <PropertyRef Name="SubeID" />
+    </Key>
+    <Property Name="SubeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SubeAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SubeCiro" Type="decimal" Nullable="false" />
+    <Property Name="SubePersonelSayisi" Type="int" Nullable="false" />
+    <Property Name="UrunUrunID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Personel">
+    <Key>
+      <PropertyRef Name="PersonelID" />
+    </Key>
+    <Property Name="PersonelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="PersonelAdSoyad" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PersonelTcNo" Type="nchar" Nullable="false" MaxLength="11" />
+    <Property Name="PersonelYas" Type="int" Nullable="false" />
+    <Property Name="PersonelMail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PersonelTelefon" Type="nchar" Nullable="false" MaxLength="10" />
+    <Property Name="PersonelAdres" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="SubeSubeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Kullanici">
+    <Key>
+      <PropertyRef Name="KullaniciID" />
+    </Key>
+    <Property Name="KullaniciID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="KullaniciAdi" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="KullaniciSifre" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="KullaniciMail" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="KulllaniciTelefon" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="UrunSube">
+    <End Role="Urun" Type="BookStore.Store.Urun" Multiplicity="1" />
+    <End Role="Sube" Type="BookStore.Store.Sube" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Urun">
+        <PropertyRef Name="UrunID" />
+      </Principal>
+      <Dependent Role="Sube">
+        <PropertyRef Name="UrunUrunID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SubePersonel">
+    <End Role="Sube" Type="BookStore.Store.Sube" Multiplicity="1" />
+    <End Role="Personel" Type="BookStore.Store.Personel" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Sube">
+        <PropertyRef Name="SubeID" />
+      </Principal>
+      <Dependent Role="Personel">
+        <PropertyRef Name="SubeSubeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="MusteriUrun">
+    <End Role="Musteri" Type="BookStore.Store.Musteri" Multiplicity="1" />
+    <End Role="Urun" Type="BookStore.Store.Urun" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Musteri">
+        <PropertyRef Name="MusteriID" />
+      </Principal>
+      <Dependent Role="Urun">
+        <PropertyRef Name="MusteriMusteriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="BookStore" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="BookStoreContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Musteri" EntityType="BookStore.Musteri" />
+          <EntitySet Name="Urun" EntityType="BookStore.Urun" />
+          <EntitySet Name="Sube" EntityType="BookStore.Sube" />
+          <EntitySet Name="Personel" EntityType="BookStore.Personel" />
+          <EntitySet Name="Kullanici" EntityType="BookStore.Kullanici" />
+          <AssociationSet Name="UrunSube" Association="BookStore.UrunSube">
+            <End Role="Urun" EntitySet="Urun" />
+            <End Role="Sube" EntitySet="Sube" />
+          </AssociationSet>
+          <AssociationSet Name="SubePersonel" Association="BookStore.SubePersonel">
+            <End Role="Sube" EntitySet="Sube" />
+            <End Role="Personel" EntitySet="Personel" />
+          </AssociationSet>
+          <AssociationSet Name="MusteriUrun" Association="BookStore.MusteriUrun">
+            <End Role="Musteri" EntitySet="Musteri" />
+            <End Role="Urun" EntitySet="Urun" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="Musteri">
+          <Key>
+            <PropertyRef Name="MusteriID" />
+          </Key>
+          <Property Name="MusteriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MusteriAdSoyad" Type="String" Nullable="false" />
+          <Property Name="MusteriTcNO" Type="String" Nullable="false" MaxLength="11" FixedLength="true" ConcurrencyMode="None" />
+          <Property Name="MusteriMail" Type="String" Nullable="false" />
+          <Property Name="MusteriTelefon" Type="String" Nullable="false" FixedLength="true" MaxLength="10" />
+          <Property Name="MusteriAdres" Type="String" Nullable="false" />
+          <NavigationProperty Name="Urun" Relationship="BookStore.MusteriUrun" FromRole="Musteri" ToRole="Urun" />
+        </EntityType>
+        <EntityType Name="Urun">
+          <Key>
+            <PropertyRef Name="UrunID" />
+          </Key>
+          <Property Name="UrunID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UrunTuru" Type="String" Nullable="false" />
+          <Property Name="UrunKategori" Type="String" Nullable="false" />
+          <Property Name="UrunAdi" Type="String" Nullable="false" />
+          <Property Name="UrunCikisYili" Type="Int32" Nullable="false" />
+          <Property Name="UrunYazarAdi" Type="String" Nullable="false" />
+          <Property Name="UrunAdet" Type="Int32" Nullable="false" />
+          <Property Name="UrunFiyat" Type="Decimal" Nullable="false" />
+          <NavigationProperty Name="Sube" Relationship="BookStore.UrunSube" FromRole="Urun" ToRole="Sube" />
+          <NavigationProperty Name="Musteri" Relationship="BookStore.MusteriUrun" FromRole="Urun" ToRole="Musteri" />
+          <Property Name="MusteriMusteriID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Sube">
+          <Key>
+            <PropertyRef Name="SubeID" />
+          </Key>
+          <Property Name="SubeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SubeAdi" Type="String" Nullable="false" />
+          <Property Name="SubeCiro" Type="Decimal" Nullable="false" />
+          <Property Name="SubePersonelSayisi" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Urun" Relationship="BookStore.UrunSube" FromRole="Sube" ToRole="Urun" />
+          <Property Name="UrunUrunID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Personel" Relationship="BookStore.SubePersonel" FromRole="Sube" ToRole="Personel" />
+        </EntityType>
+        <EntityType Name="Personel">
+          <Key>
+            <PropertyRef Name="PersonelID" />
+          </Key>
+          <Property Name="PersonelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PersonelAdSoyad" Type="String" Nullable="false" />
+          <Property Name="PersonelTcNo" Type="String" Nullable="false" FixedLength="true" MaxLength="11" />
+          <Property Name="PersonelYas" Type="Int32" Nullable="false" />
+          <Property Name="PersonelMail" Type="String" Nullable="false" />
+          <Property Name="PersonelTelefon" Type="String" Nullable="false" FixedLength="true" MaxLength="10" />
+          <Property Name="PersonelAdres" Type="String" Nullable="false" />
+          <NavigationProperty Name="Sube" Relationship="BookStore.SubePersonel" FromRole="Personel" ToRole="Sube" />
+          <Property Name="SubeSubeID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Kullanici">
+          <Key>
+            <PropertyRef Name="KullaniciID" />
+          </Key>
+          <Property Name="KullaniciID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KullaniciAdi" Type="String" Nullable="false" />
+          <Property Name="KullaniciSifre" Type="String" Nullable="false" />
+          <Property Name="KullaniciMail" Type="String" Nullable="false" />
+          <Property Name="KulllaniciTelefon" Type="String" Nullable="false" />
+        </EntityType>
+        <Association Name="UrunSube">
+          <End Type="BookStore.Urun" Role="Urun" Multiplicity="1" />
+          <End Type="BookStore.Sube" Role="Sube" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Urun">
+              <PropertyRef Name="UrunID" />
+            </Principal>
+            <Dependent Role="Sube">
+              <PropertyRef Name="UrunUrunID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="SubePersonel">
+          <End Type="BookStore.Sube" Role="Sube" Multiplicity="1" />
+          <End Type="BookStore.Personel" Role="Personel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Sube">
+              <PropertyRef Name="SubeID" />
+            </Principal>
+            <Dependent Role="Personel">
+              <PropertyRef Name="SubeSubeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="MusteriUrun">
+          <End Type="BookStore.Musteri" Role="Musteri" Multiplicity="1" />
+          <End Type="BookStore.Urun" Role="Urun" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Musteri">
+              <PropertyRef Name="MusteriID" />
+            </Principal>
+            <Dependent Role="Urun">
+              <PropertyRef Name="MusteriMusteriID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BookStoreStoreContainer" CdmEntityContainer="BookStoreContainer">
+    <EntitySetMapping Name="Musteri">
+      <EntityTypeMapping TypeName="IsTypeOf(BookStore.Musteri)">
+        <MappingFragment StoreEntitySet="Musteri">
+          <ScalarProperty Name="MusteriID" ColumnName="MusteriID" />
+          <ScalarProperty Name="MusteriAdSoyad" ColumnName="MusteriAdSoyad" />
+          <ScalarProperty Name="MusteriTcNO" ColumnName="MusteriTcNO" />
+          <ScalarProperty Name="MusteriMail" ColumnName="MusteriMail" />
+          <ScalarProperty Name="MusteriTelefon" ColumnName="MusteriTelefon" />
+          <ScalarProperty Name="MusteriAdres" ColumnName="MusteriAdres" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Urun">
+      <EntityTypeMapping TypeName="IsTypeOf(BookStore.Urun)">
+        <MappingFragment StoreEntitySet="Urun">
+          <ScalarProperty Name="UrunID" ColumnName="UrunID" />
+          <ScalarProperty Name="UrunTuru" ColumnName="UrunTuru" />
+          <ScalarProperty Name="UrunKategori" ColumnName="UrunKategori" />
+          <ScalarProperty Name="UrunAdi" ColumnName="UrunAdi" />
+          <ScalarProperty Name="UrunCikisYili" ColumnName="UrunCikisYili" />
+          <ScalarProperty Name="UrunYazarAdi" ColumnName="UrunYazarAdi" />
+          <ScalarProperty Name="UrunAdet" ColumnName="UrunAdet" />
+          <ScalarProperty Name="UrunFiyat" ColumnName="UrunFiyat" />
+          <ScalarProperty Name="MusteriMusteriID" ColumnName="MusteriMusteriID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Sube">
+      <EntityTypeMapping TypeName="IsTypeOf(BookStore.Sube)">
+        <MappingFragment StoreEntitySet="Sube">
+          <ScalarProperty Name="SubeID" ColumnName="SubeID" />
+          <ScalarProperty Name="SubeAdi" ColumnName="SubeAdi" />
+          <ScalarProperty Name="SubeCiro" ColumnName="SubeCiro" />
+          <ScalarProperty Name="SubePersonelSayisi" ColumnName="SubePersonelSayisi" />
+          <ScalarProperty Name="UrunUrunID" ColumnName="UrunUrunID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Personel">
+      <EntityTypeMapping TypeName="IsTypeOf(BookStore.Personel)">
+        <MappingFragment StoreEntitySet="Personel">
+          <ScalarProperty Name="PersonelID" ColumnName="PersonelID" />
+          <ScalarProperty Name="PersonelAdSoyad" ColumnName="PersonelAdSoyad" />
+          <ScalarProperty Name="PersonelTcNo" ColumnName="PersonelTcNo" />
+          <ScalarProperty Name="PersonelYas" ColumnName="PersonelYas" />
+          <ScalarProperty Name="PersonelMail" ColumnName="PersonelMail" />
+          <ScalarProperty Name="PersonelTelefon" ColumnName="PersonelTelefon" />
+          <ScalarProperty Name="PersonelAdres" ColumnName="PersonelAdres" />
+          <ScalarProperty Name="SubeSubeID" ColumnName="SubeSubeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Kullanici">
+      <EntityTypeMapping TypeName="IsTypeOf(BookStore.Kullanici)">
+        <MappingFragment StoreEntitySet="Kullanici">
+          <ScalarProperty Name="KullaniciID" ColumnName="KullaniciID" />
+          <ScalarProperty Name="KullaniciAdi" ColumnName="KullaniciAdi" />
+          <ScalarProperty Name="KullaniciSifre" ColumnName="KullaniciSifre" />
+          <ScalarProperty Name="KullaniciMail" ColumnName="KullaniciMail" />
+          <ScalarProperty Name="KulllaniciTelefon" ColumnName="KulllaniciTelefon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

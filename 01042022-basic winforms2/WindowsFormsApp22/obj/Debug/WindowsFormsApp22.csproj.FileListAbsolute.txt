@@ -1,0 +1,12 @@
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp22\bin\Debug\WindowsFormsApp22.exe.config
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp22\bin\Debug\WindowsFormsApp22.exe
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp22\bin\Debug\WindowsFormsApp22.pdb
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.Form1.resources
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.Form2.resources
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.Properties.Resources.resources
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.csproj.GenerateResource.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.exe
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp22\obj\Debug\WindowsFormsApp22.pdb

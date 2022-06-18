@@ -1,0 +1,8 @@
+C:\Users\ozgur\OneDrive\Masaüstü\OOP-Elektronik\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\ozgur\OneDrive\Masaüstü\OOP-Elektronik\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\ozgur\OneDrive\Masaüstü\OOP-Elektronik\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\ozgur\OneDrive\Masaüstü\OOP-Elektronik\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Users\ozgur\OneDrive\Masaüstü\OOP-Elektronik\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\ozgur\OneDrive\Masaüstü\OOP-Elektronik\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\ozgur\OneDrive\Masaüstü\OOP-Elektronik\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\ozgur\OneDrive\Masaüstü\OOP-Elektronik\ConsoleApp1\obj\Debug\ConsoleApp1.pdb

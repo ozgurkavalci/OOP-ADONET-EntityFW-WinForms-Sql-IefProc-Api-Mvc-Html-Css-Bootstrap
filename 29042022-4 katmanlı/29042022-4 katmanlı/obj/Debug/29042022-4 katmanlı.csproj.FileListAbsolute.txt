@@ -1,0 +1,18 @@
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\bin\Debug\29042022-4 katmanlı.exe.config
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\bin\Debug\29042022-4 katmanlı.exe
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\bin\Debug\29042022-4 katmanlı.pdb
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\bin\Debug\BusinessLayer.dll
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\bin\Debug\Entity.dll
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\bin\Debug\Facade.dll
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\bin\Debug\BusinessLayer.pdb
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\bin\Debug\Entity.pdb
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\bin\Debug\Facade.pdb
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\obj\Debug\29042022-4 katmanlı.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\obj\Debug\29042022-4 katmanlı.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\obj\Debug\_29042022_4_katmanlı.Form1.resources
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\obj\Debug\_29042022_4_katmanlı.Properties.Resources.resources
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\obj\Debug\29042022-4 katmanlı.csproj.GenerateResource.cache
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\obj\Debug\29042022-4 katmanlı.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\obj\Debug\29042022-4 katmanlı.csproj.CopyComplete
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\obj\Debug\29042022-4 katmanlı.exe
+C:\Users\STUDENT2\Desktop\29042022-4 katmanlı\29042022-4 katmanlı\obj\Debug\29042022-4 katmanlı.pdb

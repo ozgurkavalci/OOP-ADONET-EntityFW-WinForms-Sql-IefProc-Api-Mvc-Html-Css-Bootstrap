@@ -1,0 +1,16 @@
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\bin\Debug\20042022Nordwınd Sıralama.exe.config
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\bin\Debug\20042022Nordwınd Sıralama.exe
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\bin\Debug\20042022Nordwınd Sıralama.pdb
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\bin\Debug\EntityFramework.dll
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\bin\Debug\EntityFramework.xml
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\obj\Debug\20042022Nordwınd Sıralama.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\obj\Debug\20042022Nordwınd Sıralama.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\obj\Debug\_20042022Nordwınd_Sıralama.Form1.resources
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\obj\Debug\_20042022Nordwınd_Sıralama.Properties.Resources.resources
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\obj\Debug\20042022Nordwınd Sıralama.csproj.GenerateResource.cache
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\obj\Debug\20042022Nordwınd Sıralama.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\obj\Debug\20042022Nordwınd Sıralama.csproj.CopyComplete
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\obj\Debug\20042022Nordwınd Sıralama.exe
+C:\Users\STUDENT2\Desktop\20042022Nordwınd Sıralama\obj\Debug\20042022Nordwınd Sıralama.pdb

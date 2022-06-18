@@ -1,0 +1,11 @@
+C:\Users\ozgur\OneDrive\Masaüstü\7042022\7042022-Interface Odev\bin\Debug\7042022-Interface Odev.exe.config
+C:\Users\ozgur\OneDrive\Masaüstü\7042022\7042022-Interface Odev\bin\Debug\7042022-Interface Odev.exe
+C:\Users\ozgur\OneDrive\Masaüstü\7042022\7042022-Interface Odev\bin\Debug\7042022-Interface Odev.pdb
+C:\Users\ozgur\OneDrive\Masaüstü\7042022\7042022-Interface Odev\obj\Debug\7042022-Interface Odev.csproj.AssemblyReference.cache
+C:\Users\ozgur\OneDrive\Masaüstü\7042022\7042022-Interface Odev\obj\Debug\7042022-Interface Odev.csproj.SuggestedBindingRedirects.cache
+C:\Users\ozgur\OneDrive\Masaüstü\7042022\7042022-Interface Odev\obj\Debug\_7042022_Interface_Odev.Form1.resources
+C:\Users\ozgur\OneDrive\Masaüstü\7042022\7042022-Interface Odev\obj\Debug\_7042022_Interface_Odev.Properties.Resources.resources
+C:\Users\ozgur\OneDrive\Masaüstü\7042022\7042022-Interface Odev\obj\Debug\7042022-Interface Odev.csproj.GenerateResource.cache
+C:\Users\ozgur\OneDrive\Masaüstü\7042022\7042022-Interface Odev\obj\Debug\7042022-Interface Odev.csproj.CoreCompileInputs.cache
+C:\Users\ozgur\OneDrive\Masaüstü\7042022\7042022-Interface Odev\obj\Debug\7042022-Interface Odev.exe
+C:\Users\ozgur\OneDrive\Masaüstü\7042022\7042022-Interface Odev\obj\Debug\7042022-Interface Odev.pdb

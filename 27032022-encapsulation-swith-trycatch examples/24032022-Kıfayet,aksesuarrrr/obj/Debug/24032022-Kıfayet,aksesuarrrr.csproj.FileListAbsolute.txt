@@ -1,0 +1,7 @@
+C:\Users\STUDENT2\source\repos\24032022-Kıfayet,aksesuarrrr\bin\Debug\24032022-Kıfayet,aksesuarrrr.exe.config
+C:\Users\STUDENT2\source\repos\24032022-Kıfayet,aksesuarrrr\bin\Debug\24032022-Kıfayet,aksesuarrrr.exe
+C:\Users\STUDENT2\source\repos\24032022-Kıfayet,aksesuarrrr\bin\Debug\24032022-Kıfayet,aksesuarrrr.pdb
+C:\Users\STUDENT2\source\repos\24032022-Kıfayet,aksesuarrrr\obj\Debug\24032022-Kıfayet,aksesuarrrr.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\source\repos\24032022-Kıfayet,aksesuarrrr\obj\Debug\24032022-Kıfayet,aksesuarrrr.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\source\repos\24032022-Kıfayet,aksesuarrrr\obj\Debug\24032022-Kıfayet,aksesuarrrr.exe
+C:\Users\STUDENT2\source\repos\24032022-Kıfayet,aksesuarrrr\obj\Debug\24032022-Kıfayet,aksesuarrrr.pdb

@@ -1,0 +1,16 @@
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\ev(base class abstract örnegi (CTOR SONRASI)\obj\Debug\ev(base class abstract örnegi (CTOR SONRASI).csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\ev(base class abstract örnegi (CTOR SONRASI)\obj\Debug\ev(base class abstract örnegi (CTOR SONRASI).csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\ev(base class abstract örnegi (CTOR SONRASI)\obj\Debug\ev(base class abstract örnegi (CTOR SONRASI).csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\ev(base class abstract örnegi (CTOR SONRASI)\bin\Debug\ev(base class abstract örnegi (CTOR SONRASI).exe.config
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\ev(base class abstract örnegi (CTOR SONRASI)\bin\Debug\ev(base class abstract örnegi (CTOR SONRASI).exe
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\ev(base class abstract örnegi (CTOR SONRASI)\bin\Debug\ev(base class abstract örnegi (CTOR SONRASI).pdb
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\ev(base class abstract örnegi (CTOR SONRASI)\obj\Debug\ev(base class abstract örnegi (CTOR SONRASI).exe
+C:\Users\STUDENT2\Desktop\ozgur\29032022-\ev(base class abstract örnegi (CTOR SONRASI)\obj\Debug\ev(base class abstract örnegi (CTOR SONRASI).pdb
+C:\Users\ozgur\OneDrive\Masaüstü\ev(base class abstract örnegi (CTOR SONRASI)\bin\Debug\ev(base class abstract örnegi (CTOR SONRASI).exe.config
+C:\Users\ozgur\OneDrive\Masaüstü\ev(base class abstract örnegi (CTOR SONRASI)\bin\Debug\ev(base class abstract örnegi (CTOR SONRASI).exe
+C:\Users\ozgur\OneDrive\Masaüstü\ev(base class abstract örnegi (CTOR SONRASI)\bin\Debug\ev(base class abstract örnegi (CTOR SONRASI).pdb
+C:\Users\ozgur\OneDrive\Masaüstü\ev(base class abstract örnegi (CTOR SONRASI)\obj\Debug\ev(base class abstract örnegi (CTOR SONRASI).csproj.AssemblyReference.cache
+C:\Users\ozgur\OneDrive\Masaüstü\ev(base class abstract örnegi (CTOR SONRASI)\obj\Debug\ev(base class abstract örnegi (CTOR SONRASI).csproj.SuggestedBindingRedirects.cache
+C:\Users\ozgur\OneDrive\Masaüstü\ev(base class abstract örnegi (CTOR SONRASI)\obj\Debug\ev(base class abstract örnegi (CTOR SONRASI).csproj.CoreCompileInputs.cache
+C:\Users\ozgur\OneDrive\Masaüstü\ev(base class abstract örnegi (CTOR SONRASI)\obj\Debug\ev(base class abstract örnegi (CTOR SONRASI).exe
+C:\Users\ozgur\OneDrive\Masaüstü\ev(base class abstract örnegi (CTOR SONRASI)\obj\Debug\ev(base class abstract örnegi (CTOR SONRASI).pdb

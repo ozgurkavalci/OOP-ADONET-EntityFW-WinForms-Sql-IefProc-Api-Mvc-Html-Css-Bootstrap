@@ -1,0 +1,11 @@
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2-Maas sonrası yeni örnek\bin\Debug\WindowsFormsApp2-Maas sonrası yeni örnek.exe.config
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2-Maas sonrası yeni örnek\bin\Debug\WindowsFormsApp2-Maas sonrası yeni örnek.exe
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2-Maas sonrası yeni örnek\bin\Debug\WindowsFormsApp2-Maas sonrası yeni örnek.pdb
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2-Maas sonrası yeni örnek\obj\Debug\WindowsFormsApp2-Maas sonrası yeni örnek.csproj.AssemblyReference.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2-Maas sonrası yeni örnek\obj\Debug\WindowsFormsApp2-Maas sonrası yeni örnek.csproj.SuggestedBindingRedirects.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2-Maas sonrası yeni örnek\obj\Debug\WindowsFormsApp2_Maas_sonrası_yeni_örnek.Form1.resources
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2-Maas sonrası yeni örnek\obj\Debug\WindowsFormsApp2_Maas_sonrası_yeni_örnek.Properties.Resources.resources
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2-Maas sonrası yeni örnek\obj\Debug\WindowsFormsApp2-Maas sonrası yeni örnek.csproj.GenerateResource.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2-Maas sonrası yeni örnek\obj\Debug\WindowsFormsApp2-Maas sonrası yeni örnek.csproj.CoreCompileInputs.cache
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2-Maas sonrası yeni örnek\obj\Debug\WindowsFormsApp2-Maas sonrası yeni örnek.exe
+C:\Users\STUDENT2\Desktop\ozgur\winform\01042022-\WindowsFormsApp2-Maas sonrası yeni örnek\obj\Debug\WindowsFormsApp2-Maas sonrası yeni örnek.pdb
